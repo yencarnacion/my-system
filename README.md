@@ -2,6 +2,8 @@
 
 An iPhone-friendly interactive edition of Aron Nimzowitsch’s **My System**, using Philip Hereford’s **1929 translation**. Read the book beside a board, replay the illustrative games, and try your own moves.
 
+[Read the book online](https://yencarnacion.github.io/my-system/).
+
 - All 15 chapters, front matter, and 50 illustrative games.
 - All 237 diagrams, including the book’s conceptual and composite illustrations.
 - 3,807 legally validated game half-moves, with original annotations and descriptive notation.
