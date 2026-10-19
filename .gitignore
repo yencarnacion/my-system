@@ -1,0 +1,17 @@
+node_modules/
+dist/
+test-results/
+__pycache__/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.idea/
+.vscode/
+.aws/
+.codex/
+.agents/
+*.pem
+*.key
+.venv/

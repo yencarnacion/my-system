@@ -1,0 +1,76 @@
+{
+  "diagram_CLXXXVII": {
+    "placement": "2rr2k1/pq2pp1p/1p3bp1/8/3P1P2/2P2R2/PB4PP/R3Q2K",
+    "note": "Printed p243 transposes the black king and g-pawn; 4...g6 and7...O-O establish Kg8 and Pg6.",
+    "game": "game11",
+    "ply": 43
+  },
+  "diagram_CXCIII": {
+    "placement": "r4rk1/1q2pp1p/3p1npb/p1p5/1nP5/1P2NPP1/PB1QP1KP/R2N1R2",
+    "note": "Legacy diagram omits black knight f6, present in validated Game18 after17.Ncd1.",
+    "game": "game18",
+    "ply": 33
+  },
+  "diagram_CXCVII": {
+    "placement": "r1bqk2r/p4pp1/1p2p2p/n2pPn2/P1pP4/2P2N1Q/2P1BPPP/R1B1K2R",
+    "note": "Scan p258 (PDF137) and validated score show black pawn c4, omitted in legacy FEN.",
+    "game": "game21",
+    "ply": 25
+  },
+  "diagram_CXCVIII": {
+    "placement": "r3q2r/p1kb1pp1/1p2p3/3pPn2/P2P1Pp1/B1PB4/2P3QP/R3K2R",
+    "note": "Scan p259 (PDF137) and score show black Na5 has already been captured; legacy FEN retains it.",
+    "game": "game21",
+    "ply": 43
+  },
+  "diagram_CCII": {
+    "placement": "5rnk/2q1b1np/BpPp2p1/1P2p1P1/4P3/P3QNN1/1B3P2/6K1",
+    "note": "Scan p262 (PDF139) and score show white bishop a6, omitted in legacy FEN.",
+    "game": "game22",
+    "ply": 65
+  },
+  "diagram_CCXIV": {
+    "placement": "r4r1k/pp5p/1qb2p2/4bP2/4N2N/1PnR1Q2/P6P/4RB1K",
+    "note": "Scan p291 (PDF153) and24.Kh1 put White king h1, not legacy g1.",
+    "game": "game43",
+    "ply": 64
+  },
+  "diagram_CCXVII": {
+    "placement": "r3k2r/pp2npp1/1q2p3/3nPb1p/5P2/1P3Q1B/P4RPP/R1B1N1K1",
+    "note": "Printed p295 wrongly places black bishop on e6; score requires pawn e6. White20.Kg1 and scan put king g1 (legacy h1).",
+    "game": "game45",
+    "ply": 45
+  },
+  "diagram_CLXXXII": {
+    "placement": "r1n2rk1/p4p1p/1pp1bbp1/P3p3/N3P3/1P2BP2/2PRN1PP/2KR4",
+    "caption": "Position after Black's 17th move",
+    "note": "Legacy caption says9th; exact placement matches validated Game9 after17...b6.",
+    "game": "game09",
+    "ply": 34
+  },
+  "diagram_VI": {
+    "placement": "r1bqkbnr/ppp2ppp/2n5/1B1pp3/3PP3/5N2/PPP2PPP/RNBQK2R",
+    "note": "Part I, chapter I, §5; printed p8, PDF spread12. The printed diagram itself mistakenly retains a white pawn at d2 in addition to d4. The explicitly given opening 1.e4 e5 2.Nf3 Nc6 3.d4 d5 4.Bb5 proves d2 must be empty; remove the duplicate pawn to reproduce the source continuation."
+  },
+  "diagram_XXX": {
+    "placement": "rr4k1/2R3pp/5p2/7Q/6P1/pq1P4/6PK/2R5",
+    "note": "Part I, chapter III, §2; printed p35, PDF spread25. The scan has a white rook on c7, omitted from the legacy FEN. The text starts 1.RxP ch (Rxg7+) and confirms this rook."
+  },
+  "diagram_XLVa": {
+    "placement": "8/2k5/2r5/2P5/1K1Qb3/8/8/8",
+    "note": "Part I, chapter IV, §3a; printed p53, PDF spread34. The scan clearly shows the black bishop on e4; the legacy FEN omitted it. The surrounding text begins 1...B-Kt3 (Bg6)."
+  },
+  "diagram_CXLV": {
+    "placement": "r2qkbnr/pp4pp/2n1p3/2p2p2/3p1P2/2NP1PP1/PPP3BP/R1BQ1RK1",
+    "note": "Part II, chapter II, §5c; printed p184, PDF spread100. The printed diagram itself uses a knight glyph at g1 in place of the White king. The adjacent explicit score ends 8.O-O P-Q5, proving White Kg1; all other squares match the replay exactly. This is a printed diagram erratum, not a deliberate skeleton."
+  },
+  "diagram_CLXXXVIII": {
+    "placement": "1r4k1/p2bqpp1/1rp2n1p/2Np4/R7/1PQBP3/P4PPP/2R3K1",
+    "caption": "Position after White's 22nd move in Nimzowitsch—the Allies",
+    "note": "Game11 illustrative consultation example, Nimzowitsch–Kudrjawzew/Landau, Dorpat1910; printed p244, PDF spread130. Scan has White Kg1 (legacy FEN Qg1) and Ra4 (legacy FEN Ra3). Replaying the entire adjacent score through22.R-QR4 produces this exact position. The printed caption says23rd but the printed score reaches it after22.Ra4."
+  },
+  "diagram_XXXIV": {
+    "placement": "rr4k1/2RR4/5p2/3ppP2/2b5/7N/6PK/8",
+    "note": "Part I, chapter III, §3(b), printed p40, PDF spread28. The scan clearly shows White Pf5, omitted from the legacy FEN. It supplies the explicitly printed continuation5.P-B6 after4...PxKt."
+  }
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#f6f3eb" />
+    <meta
+      name="description"
+      content="Read Aron Nimzowitsch’s My System with interactive chessboards, annotated game replays, and your own chess laboratory. The 1929 Philip Hereford edition."
+    />
+    <title>My System · A chess laboratory</title>
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="topbar">
+      <a class="brand" href="#/" aria-label="My System home"
+        ><span class="brand-mark" aria-hidden="true">N</span
+        ><span>My System<small>THE INTERACTIVE EDITION</small></span></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#/library">The book</a><a href="#/study">The laboratory</a>
+      </nav>
+      <div class="header-actions">
+        <button
+          id="search-open"
+          class="icon-button"
+          aria-label="Search the book"
+        ></button
+        ><button
+          id="settings-open"
+          class="icon-button"
+          aria-label="Reading settings"
+        ></button>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <div class="loading">
+        <span class="brand-mark">N</span>
+        <p>Opening the book…</p>
+      </div>
+    </main>
+    <dialog
+      id="search-dialog"
+      class="search-dialog"
+      aria-labelledby="search-title"
+    >
+      <div class="dialog-heading">
+        <h2 id="search-title">Find an idea.</h2>
+        <button class="icon-button close-dialog" aria-label="Close search">
+          ×
+        </button>
+      </div>
+      <label for="search-input"
+        >Search chapters, passages, games, and diagrams</label
+      ><input
+        id="search-input"
+        type="search"
+        placeholder="Try “blockade” or “Diagram III”"
+        autocomplete="off"
+      />
+      <p id="search-count" role="status"></p>
+      <div id="search-results"></div>
+    </dialog>
+    <dialog id="settings-dialog" aria-labelledby="settings-title">
+      <div class="dialog-heading">
+        <h2 id="settings-title">Make yourself comfortable.</h2>
+        <button class="icon-button close-dialog" aria-label="Close settings">
+          ×
+        </button>
+      </div>
+      <fieldset>
+        <legend>Reading size</legend>
+        <div class="choice-row">
+          <button data-size="20">Comfortable</button
+          ><button data-size="23">Large</button
+          ><button data-size="26">Larger</button>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Page colour</legend>
+        <div class="choice-row">
+          <button data-theme="paper">Paper</button
+          ><button data-theme="night">Night</button>
+        </div>
+      </fieldset>
+      <p>
+        Your progress, bookmarks, and settings stay in this browser. No account
+        needed.
+      </p>
+      <a href="#/about" class="text-link dialog-link"
+        >About this edition & sources →</a
+      >
+    </dialog>
+    <div id="toast" class="toast" role="status"></div>
+    <noscript
+      ><p>
+        This interactive edition needs JavaScript. You can still
+        <a href="./source/my-system-1929.pdf">read the original 1929 scan</a>.
+      </p></noscript
+    >
+  </body>
+</html>

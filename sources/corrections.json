@@ -1,0 +1,14 @@
+{
+  "moves": {
+    "game07:12w": {"move":"PxB", "note":"Printed p235 has P×Kt and a handwritten correction. 11...BxKt leaves a black bishop on f3; g2xf3 is PxB."}
+  },
+  "diagrams": {
+    "diagram_CLXXXVII": {"placement":"2rr2k1/pq2pp1p/1p3bp1/8/3P1P2/2P2R2/PB4PP/R3Q2K", "note":"Printed p243 transposes Black’s king and g-pawn. The game score (4...g6, 7...O-O) places the king on g8 and pawn on g6."},
+    "diagram_CCXVII": {"placement":"r3k2r/pp2npp1/1q2p3/3nPb1p/5P2/1P3Q1B/P4RPP/R1B1N1K1", "note":"Printed p295 shows a bishop on e6; the score places a pawn there. The legacy transcription also puts White’s king on h1; the scan and 20.Kg1 place it on g1."}
+  },
+  "restorations": [
+    "Game 2 moves 16–23 restored from the scan, printed page 230 (PDF page 123).",
+    "Game 45 printed 37...Q-KR5 follows White’s 36th move; interpreted as 36...Q-KR5.",
+    "Game 49 is deliberately an excerpt ending at 20.B-KB5; subsequent comparison games are not appended to its replay."
+  ]
+}

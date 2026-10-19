@@ -1,0 +1,106 @@
+{
+  "game03:6w": {
+    "move": "Kt-Q2",
+    "note": "Legacy HTML says Kt-O2; 1929 scan p231 shows Kt-Q2 (Nd2)."
+  },
+  "game05:18w": {
+    "move": "B-K3",
+    "note": "Legacy OCR IC misreads K; bishop develops c1-e3, consistent with later B-Q2. OCR text reads B-K3."
+  },
+  "game07:38w": {
+    "move": "Q-KB1",
+    "note": "Legacy HTML omits rank; queen retreats c1-f1 before 40.Q-B4. Verify against scan p237."
+  },
+  "game12:8b": {
+    "move": "PxKt",
+    "note": "Legacy OCR PxRt misreads Kt; black pawn captures knight c6, as the commentary describes."
+  },
+  "game14:7w": {
+    "move": "B-B4",
+    "note": "Legacy HTML omits rank in B-B!!; Bc4 forces ...d5 and then Bb3, as the commentary explains."
+  },
+  "game19:11w": {
+    "move": "K-B1",
+    "note": "Legacy HTML K-K1 is impossible from e1. Bishop b4 checks on e1 and the forced king move is Kf1, also used in the earlier illustrative position."
+  },
+  "game21:2w": {
+    "move": "P-Q4",
+    "note": "Missing dash in legacy P Q4."
+  },
+  "game23:4w": {
+    "move": "B-Kt2",
+    "note": "Legacy OCR ICt misreads Kt; bishop f1-g2 after g3."
+  },
+  "game24:1w": {
+    "move": "P-Q4",
+    "note": "Missing dash in legacy PQ4."
+  },
+  "game26:12w": {
+    "move": "QR-Q1",
+    "note": "Legacy QR-Q2 is impossible for the a1 rook; OCR text p266 gives QR-Q1. This yields a legal complete line with the rook later returning to a1 and advancing to a4."
+  },
+  "game34:16b": {
+    "move": "PxB",
+    "note": "After 16.BxKt the captured white piece is a bishop on c6, so b7xc6 is PxB, not PxKt."
+  },
+  "game40:14w": {
+    "move": "QR-Q1",
+    "note": "Legacy QR--Q1 has an extra dash."
+  },
+  "game42:11w": {
+    "move": "B-Q3",
+    "note": "Legacy B-O3 is Q/O OCR error; Bd3 is legal."
+  },
+  "game48:17w": {
+    "move": "QR-QB1",
+    "note": "Legacy QK-QB1 misreads QR, the queen rook moving a1-c1."
+  },
+  "game48:44w": {
+    "move": "QxQKtP",
+    "note": "Legacy Q-QKtP has wrong move separator; destination is the pawn on b7, captured by the queen."
+  },
+  "game13:20b": {
+    "move": "P-KB3",
+    "note": "Legacy V-KB3 is a P/V OCR error; f7-f6."
+  },
+  "game11:2w": {
+    "move": "P-Q3",
+    "note": "Legacy P-K3 would move the already advanced e4 pawn backwards; actual move must d2-d3, clearing d2 for 6.Nd2 and retaining e4 pawn for 9.exd5. Independently corroborated by https://en.chessbase.com/post/riddle-thomas-alekhine-1925 (1.e4 Nf6 2.d3 c5)."
+  },
+  "game06:23w": {
+    "move": "K-R1",
+    "note": "Remove parenthesized annotation (!) from score token."
+  },
+  "game19:22w": {
+    "move": "B-B1",
+    "note": "Legacy doubled dash in B--B1."
+  },
+  "game23:30b": {
+    "move": "R(R)-Kt1",
+    "note": "Missing dash in legacy R(R)Kt1."
+  },
+  "game41:35w": {
+    "move": "K-Kt2",
+    "note": "Legacy ICt is OCR for Kt."
+  },
+  "game02:54b": {
+    "move": "B-Kt5",
+    "note": "1929 p231 prints B-Kt4, impossible from d1. Correct Bg4 is B-Kt5. Historical game score corroboration: https://www.chessbox.in/chessgame/teichmann-richard-nimzowitsch-aaron-3/ (54.g5 Bg4 55.g6+)."
+  },
+  "game11:23b": {
+    "move": "Q-QKt4",
+    "note": "Scan p244 (PDF130) clearly gives Q-QKt4, not legacy Q-Q4; Qd5-b5."
+  },
+  "game21:52b": {
+    "move": "R-Q5 ch",
+    "note": "1929 p260 prints R-Q4 ch, but the rook on e4 cannot move to d5. Rd4+ (R-Q5 ch) is the legal problem check consistent with 53.Ke2 Rxf4 and all subsequent printed moves."
+  },
+  "game40:47b": {
+    "move": "R(QB)xKBP",
+    "note": "Legacy uses a noncapture separator before a victim descriptor. Rook c4 captures the pawn f4; R(QB)xKBP."
+  },
+  "game49:13w": {
+    "move": "P-QR4",
+    "note": "Scan p301 (PDF158) clearly shows P-QR4; legacy P-QB4 would make the later 16.P-QB3 impossible."
+  }
+}

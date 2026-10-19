@@ -1,0 +1,387 @@
+[
+  {
+    "game": "game04",
+    "kind": "replace-block",
+    "block": "game04-b6",
+    "score": "1. P-Q4, Kt-KB3; 2. Kt-KB3, P-Q3; 3. QKt-Q2, QKt-Q2; 4. P-K4, P-K4; 5. P-QB3, B-K2; 6. B-QB4, O-O; 7. O-O, PxP; 8. PxP, P-Q4; 9. B-Q3, PxP; 10. KtxP, KtxKt; 11. BxKt, Kt-B3; 12. B-Q3, Kt-Q4; 13. P-QR3, B-B3",
+    "note": "Opening score is inline in original block; missing separator after black move 2 restored."
+  },
+  {
+    "game": "game06",
+    "kind": "replace-block",
+    "block": "game06-b4",
+    "score": "1. P-K4, P-K4; 2. Kt-KB3, Kt-QB3; 3. B-Kt5, P-QR3; 4. B-R4, Kt-KB3; 5. Kt-QB3, B-Kt5; 6. Kt-Q5, B-K2; 7. P-Q3, P-Q3; 8. Kt-Kt4, B-Q2; 9. KtxKt, BxKt; 10. BxB, PxB",
+    "note": "Opening moves embedded in prose. Scan p234 confirms 5...B-Kt5 (legacy B-Kts)."
+  },
+  {
+    "game": "game10",
+    "kind": "replace-block",
+    "block": "game10-b16",
+    "score": "10. Kt-K5, KtxKt; 11. KtxB, QxQ; 12. KtxQ, Kt-Q4; 13. B-Q2, ....",
+    "note": "Restore score punctuation from legacy block; retain surrounding commentary."
+  },
+  {
+    "game": "game10",
+    "kind": "replace-block",
+    "block": "game10-b21",
+    "score": "14. Kt-Kt3, B-Kt5",
+    "note": "Restore score punctuation from legacy block; retain surrounding commentary."
+  },
+  {
+    "game": "game10",
+    "kind": "replace-block",
+    "block": "game10-b49",
+    "score": "28. ...., R-Q4",
+    "note": "Original misnumbers Black reply to 28.P-KR5 as 29; scan p242 has same printing error."
+  },
+  {
+    "game": "game13",
+    "kind": "replace-block",
+    "block": "game13-b32",
+    "score": "18. ...., Kt-B1",
+    "note": "Black reply to 18.Q-Q3 is incorrectly numbered 19."
+  },
+  {
+    "game": "game20",
+    "kind": "replace-block",
+    "block": "game20-b5",
+    "score": "15. Kt-QB3!, Kt-QR3",
+    "note": "Legacy uses em dash between White and Black moves rather than comma."
+  },
+  {
+    "game": "game20",
+    "kind": "reuse-opening",
+    "block": null,
+    "score": "game19:1w-14b",
+    "note": "Text expressly states first 14 moves, with transposition, are as Game19. Use corrected Game19 position and prepend its first 28 plies."
+  },
+  {
+    "game": "game22",
+    "kind": "replace-block",
+    "block": "game22-b17",
+    "score": "11. P-QKt4, QKt-Q2",
+    "note": "Legacy move number ix. is OCR corruption of 11."
+  },
+  {
+    "game": "game34",
+    "kind": "replace-block",
+    "block": "game34-b33",
+    "score": "17. O-O, P-Kt4",
+    "note": "Restore score punctuation from legacy block; retain surrounding commentary."
+  },
+  {
+    "game": "game39",
+    "kind": "replace-block",
+    "block": "game39-b12",
+    "score": "6. P-QB4, BxKt!",
+    "note": "Legacy Cyrillic б. replaces numeral 6."
+  },
+  {
+    "game": "game47",
+    "kind": "replace-block",
+    "block": "game47-b5",
+    "score": "2. Kt-KB3, P-K3",
+    "note": "Restore score punctuation from legacy block; retain surrounding commentary."
+  },
+  {
+    "game": "game50",
+    "kind": "replace-block",
+    "block": "game50-b21",
+    "score": "11. P-QR3, O-O-O",
+    "note": "Restore score punctuation from legacy block; retain surrounding commentary."
+  },
+  {
+    "game": "game02",
+    "kind": "replace-block",
+    "block": "game02-b43",
+    "score": "33. ...., B-Q3; 34. P-KB4, K-B1; 35. K-Kt1, P-KKt3; 36. K-B2, P-KR4; 37. Kt-QB5, B-QB1; 38. P-QR5, Kt-R3; 39. P-QKt4, K-B2; 40. P-B3, Kt-Kt1; 41. K-B3, Kt-B3; 42. B-Q4, BxKt; 43. BxB, B-K3; 44. B-Q4, Kt-K5; 45. Kt-K2, B-B4; 46. P-Kt4, PxP ch; 47. PxP, Kt-Q7 ch; 48. K-Kt3, B-B7; 49. Kt-Kt1, K-K3; 50. K-R4, B-Q8; 51. Kt-R3, Kt-K5; 52. P-B5 ch, PxP; 53. Kt-B4 ch, K-B2; 54. P-Kt5, B-Kt4; 55. P-Kt6 ch, K-K2; 56. P-Kt7, K-B2; 57. Kt-Kt6",
+    "note": "Main continuation explicitly given in this source block. Parenthetical analysis omitted from score; preserve complete block as annotation."
+  },
+  {
+    "game": "game03",
+    "kind": "replace-block",
+    "block": "game03-b44",
+    "score": "29. K-B2, PxP; 30. PxP, KxP; 31. K-K2, K-Kt4; 32. K-Q2, B-R6; 33. K-B2, RxB ch; 34. RxR, BxR; 35. KxB, K-B5; 36. P-KKt4, K-Q6; 37. P-Kt5, KxKP",
+    "note": "Main continuation explicitly given in this source block. Parenthetical analysis omitted from score; preserve complete block as annotation."
+  },
+  {
+    "game": "game05",
+    "kind": "replace-block",
+    "block": "game05-b39",
+    "score": "29. ...., R-Q1; 30. Q-Kt1, R-Q7; 31. BxP, Q-B4; 32. B-Q5 ch, K-Kt2; 33. Q-B1, QxP ch; 34. K-R1, RxB",
+    "note": "Main continuation explicitly given in this source block. Parenthetical analysis omitted from score; preserve complete block as annotation."
+  },
+  {
+    "game": "game12",
+    "kind": "replace-block",
+    "block": "game12-b63",
+    "score": "36. P-B6, BxP; 37. K-B2, RxR; 38. PxR, Q-Kt7 ch; 39. K-K1, B-B6; 40. QxP, Q-Kt8 ch",
+    "note": "Main continuation explicitly given in this source block. Parenthetical analysis omitted from score; preserve complete block as annotation."
+  },
+  {
+    "game": "game13",
+    "kind": "replace-block",
+    "block": "game13-b62",
+    "score": "32. ...., B-B3; 33. R-K3, B-Q2",
+    "note": "Main continuation explicitly given in this source block. Parenthetical analysis omitted from score; preserve complete block as annotation."
+  },
+  {
+    "game": "game16",
+    "kind": "replace-block",
+    "block": "game16-b48",
+    "score": "29. ...., RxKt; 30. P-QB3, QxQP; 31. KPxR, QxP(B4); 32. PxB, QxP; 33. Q-B2, P-QB5; 34. Q-KB5, QxQ; 35. PxQ",
+    "note": "Main continuation explicitly given in this source block. Parenthetical analysis omitted from score; preserve complete block as annotation."
+  },
+  {
+    "game": "game19",
+    "kind": "replace-block",
+    "block": "game19-b67",
+    "score": "40. K-Kt4, R-R6; 41. R-Q1, R-Kt6; 42. P-KR4, Kt-K2; 43. Kt-K1, Kt-B4; 44. Kt-Q3, P-QR4; 45. Kt-B5, R-QB6; 46. R-QKt1, KtxQP; 47. Kt-R6 ch, K-Q1; 48. R-Kt8 ch, R-B1; 49. R-Kt7, K-K1; 50. Kt-B7 ch, K-B1; 51. Kt-Kt5, KtxKt; 52. RxKt, R-QR1",
+    "note": "Main continuation explicitly given in this source block. Parenthetical analysis omitted from score; preserve complete block as annotation."
+  },
+  {
+    "game": "game21",
+    "kind": "replace-block",
+    "block": "game21-b96",
+    "score": "49. ...., K-R4; 50. R-KB6, P-R7; 51. B-Q2 ch, K-Kt4; 52. B-B3, R-Q4 ch; 53. K-K2, RxP; 54. R-B8, K-B5; 55. B-R1, R-K5 ch; 56. K-Q2, P-B5; 57. R-QB8 ch, K-Q4; 58. R-Q8 ch, K-K3; 59. R-K8 ch, K-B4; 60. R-KKt8, P-B6",
+    "note": "Main continuation explicitly given in this source block. Parenthetical analysis omitted from score; preserve complete block as annotation."
+  },
+  {
+    "game": "game23",
+    "kind": "replace-block",
+    "block": "game23-b56",
+    "score": "34. ...., B-K2; 35. K-B2, K-B2; 36. K-K2, K-K1; 37. K-Q3, K-Q2; 38. K-B3, B-Q1; 39. Kt-B4, B-B2; 40. P-KKt4, B-Q1; 41. R-R6, B-B2; 42. P-KR4, B-Q1; 43. P-R5, B-B2; 44. P-QKt4, R-Kt2; 45. R-R8, K-Q1; 46. K-Kt3, R-Kt1; 47. RxR, BxR; 48. P-QKt5, Kt-K2; 49. P-Kt6, P-KB4; 50. KtPxP, Kt-Kt1; 51. B-B2, Kt-B3; 52. B-R4",
+    "note": "Main continuation explicitly given in this source block. Parenthetical analysis omitted from score; preserve complete block as annotation."
+  },
+  {
+    "game": "game24",
+    "kind": "replace-block",
+    "block": "game24-b66",
+    "score": "39. K-K1, Kt-K3; 40. Q-K5, R-K1; 41. KtxKtP, Q-Kt6; 42. B-K2, Q-Kt8 ch; 43. K-B2, Q-KR8; 44. Kt-Q6, Q-R5 ch; 45. K-Kt2, KtxP ch; 46. QxKt, B-Q4 ch; 47. B-B3, BxB ch; 48. KxB",
+    "note": "Main continuation explicitly given in this source block. Parenthetical analysis omitted from score; preserve complete block as annotation."
+  },
+  {
+    "game": "game28",
+    "kind": "replace-block",
+    "block": "game28-b36",
+    "score": "23. R-B2, KtxB; 24. KtxKt, B-K3; 25. QR-Q1, KR-Q1; 26. P-QKt3, Kt-B5; 27. Kt-Kt2, KtxKt(Q3); 28. RxKt, RxR; 29. QxR, R-Q1; 30. Q-K2, P-R6; 31. Kt-K3, P-QR4; 32. R-B1, P-R5; 33. P-QB4, R-Q5; 34. Kt-QB2, R-Q2; 35. Kt-K3, Q-Q1; 36. R-Q1, RxR; 37. KtxR, Q-Q5; 38. Kt-B2, P-QKt4; 39. BPxP, RPxP; 40. RPxP, BxQKtP; 41. KtxP, B-Q8; 42. Q-KB1, PxP; 43. K-Kt2, P-Kt5; 44. Q-Kt5, P-Kt6; 45. Q-K8 ch, K-Kt2; 46. Q-K7, P-Kt7; 47. KtxP, B-Kt6",
+    "note": "Main continuation explicitly given in this source block. Parenthetical analysis omitted from score; preserve complete block as annotation."
+  },
+  {
+    "game": "game32",
+    "kind": "replace-block",
+    "block": "game32-b57",
+    "score": "26. ...., PxKt; 27. KtxBP, Kt-Q5; 28. Q-B2, Q-QB3; 29. KtxR, QxKt; 30. BxKt, KPxB; 31. PxP",
+    "note": "Main continuation explicitly given in this source block. Parenthetical analysis omitted from score; preserve complete block as annotation."
+  },
+  {
+    "game": "game37",
+    "kind": "replace-block",
+    "block": "game37-b38",
+    "score": "26. B-K7, R-K1; 27. K-Kt1, R-K7; 28. BxP, R-Q1; 29. B-Q4, R-QB1; 30. R-KKt4",
+    "note": "Main continuation explicitly given in this source block. Parenthetical analysis omitted from score; preserve complete block as annotation."
+  },
+  {
+    "game": "game38",
+    "kind": "replace-block",
+    "block": "game38-b54",
+    "score": "28. ...., PxB; 29. KtxP, R-R4; 30. Kt-B2, RxP; 31. Kt-Q4, R-QKt7; 32. P-B5, Kt-B2; 33. PxP, KtxP; 34. Kt-B6, P-Q5",
+    "note": "Main continuation explicitly given in this source block. Parenthetical analysis omitted from score; preserve complete block as annotation."
+  },
+  {
+    "game": "game40",
+    "kind": "replace-block",
+    "block": "game40-b82",
+    "score": "48. Kt-K3, R-Kt6; 49. R-K5, K-B3; 50. R-K8, K-B2; 51. R-K5, R-B3; 52. P-B4, P-Kt6; 53. K-K4, R-K3; 54. RxR, KxR; 55. Kt-Q5, P-Kt4",
+    "note": "Main continuation explicitly given in this source block. Parenthetical analysis omitted from score; preserve complete block as annotation."
+  },
+  {
+    "game": "game41",
+    "kind": "replace-block",
+    "block": "game41-b79",
+    "score": "55. PxP, P-KB4; 56. P-K5, Kt-B3; 57. RxBP, Kt-Kt5; 58. RxB, QxQ; 59. RxQ, PxR; 60. P-Q6, R-QR2; 61. P-K6, R-R3; 62. P-K7, Kt-B3; 63. P-Q7, KtxP; 64. BxKt",
+    "note": "Main continuation explicitly given in this source block. Parenthetical analysis omitted from score; preserve complete block as annotation."
+  },
+  {
+    "game": "game46",
+    "kind": "replace-block",
+    "block": "game46-b60",
+    "score": "30. ...., K-Kt1; 31. P-QR3, K-B1; 32. B-R4, B-K1; 33. B-B5, Q-Q5; 34. QxQ, PxQ; 35. RxR, KxR; 36. B-Q3, K-Q3; 37. BxKt, PxB; 38. P-KR4",
+    "note": "Main continuation explicitly given in this source block. Parenthetical analysis omitted from score; preserve complete block as annotation."
+  },
+  {
+    "game": "game13",
+    "kind": "replace-block",
+    "block": "game13-b63",
+    "score": "34. P-B5, QxQ ch; 35. KxQ, BxP; 36. R-K7 ch, K-R3; 37. RxP, B-Kt8; 38. R-R6, P-QKt4; 39. P-R4, PxP; 40. PxP, K-Kt4; 41. R-Kt6, B-K5; 42. P-R5, P-B4; 43. P-R6, P-QB5; 44. P-R7, P-B6; 45. R-Kt3, P-B5 ch; 46. K-B2, P-B7; 47. R-QB3",
+    "note": "Restore score punctuation from legacy block; retain surrounding commentary."
+  },
+  {
+    "game": "game09",
+    "kind": "replace-block",
+    "block": "game09-b55",
+    "score": "29. RxB",
+    "note": "Final played move shares a line with resignation/result prose; keep the move and retain result as commentary."
+  },
+  {
+    "game": "game10",
+    "kind": "replace-block",
+    "block": "game10-b89",
+    "score": "53. K-R6",
+    "note": "Final played move shares a line with resignation/result prose; keep the move and retain result as commentary."
+  },
+  {
+    "game": "game13",
+    "kind": "replace-block",
+    "block": "game13-b61",
+    "score": "32. Q-KKt3",
+    "note": "Final played move shares a line with resignation/result prose; keep the move and retain result as commentary."
+  },
+  {
+    "game": "game14",
+    "kind": "replace-block",
+    "block": "game14-b53",
+    "score": "27. R-KB1",
+    "note": "Final played move shares a line with resignation/result prose; keep the move and retain result as commentary."
+  },
+  {
+    "game": "game15",
+    "kind": "replace-block",
+    "block": "game15-b45",
+    "score": "27. Kt-Q7 ch",
+    "note": "Final played move shares a line with resignation/result prose; keep the move and retain result as commentary."
+  },
+  {
+    "game": "game17",
+    "kind": "replace-block",
+    "block": "game17-b34",
+    "score": "17. BxP ch",
+    "note": "Final played move shares a line with resignation/result prose; keep the move and retain result as commentary."
+  },
+  {
+    "game": "game20",
+    "kind": "replace-block",
+    "block": "game20-b40",
+    "score": "41. P-KR4",
+    "note": "Final played move shares a line with resignation/result prose; keep the move and retain result as commentary."
+  },
+  {
+    "game": "game25",
+    "kind": "replace-block",
+    "block": "game25-b43",
+    "score": "24. P-K6",
+    "note": "Final played move shares a line with resignation/result prose; keep the move and retain result as commentary."
+  },
+  {
+    "game": "game26",
+    "kind": "replace-block",
+    "block": "game26-b32",
+    "score": "19. R-R4",
+    "note": "Final played move shares a line with resignation/result prose; keep the move and retain result as commentary."
+  },
+  {
+    "game": "game29",
+    "kind": "replace-block",
+    "block": "game29-b42",
+    "score": "29. BxP ch",
+    "note": "Final played move shares a line with resignation/result prose; keep the move and retain result as commentary."
+  },
+  {
+    "game": "game33",
+    "kind": "replace-block",
+    "block": "game33-b77",
+    "score": "36. PxB",
+    "note": "Final played move shares a line with resignation/result prose; keep the move and retain result as commentary."
+  },
+  {
+    "game": "game34",
+    "kind": "replace-block",
+    "block": "game34-b47",
+    "score": "25. PxP",
+    "note": "Final played move shares a line with resignation/result prose; keep the move and retain result as commentary."
+  },
+  {
+    "game": "game36",
+    "kind": "replace-block",
+    "block": "game36-b59",
+    "score": "35. KtxP",
+    "note": "Final played move shares a line with resignation/result prose; keep the move and retain result as commentary."
+  },
+  {
+    "game": "game42",
+    "kind": "replace-block",
+    "block": "game42-b50",
+    "score": "30. B-R6",
+    "note": "Final played move shares a line with resignation/result prose; keep the move and retain result as commentary."
+  },
+  {
+    "game": "game43",
+    "kind": "replace-block",
+    "block": "game43-b83",
+    "score": "46. RxB",
+    "note": "Final played move shares a line with resignation/result prose; keep the move and retain result as commentary."
+  },
+  {
+    "game": "game46",
+    "kind": "replace-block",
+    "block": "game46-b59",
+    "score": "30. QxP",
+    "note": "Final played move shares a line with resignation/result prose; keep the move and retain result as commentary."
+  },
+  {
+    "game": "game49",
+    "kind": "replace-block",
+    "block": "game49-b30",
+    "score": "20. B-KB5",
+    "note": "Final played move shares a line with resignation/result prose; keep the move and retain result as commentary."
+  },
+  {
+    "game": "game50",
+    "kind": "replace-block",
+    "block": "game50-b44",
+    "score": "27. QxB ch",
+    "note": "Final played move shares a line with resignation/result prose; keep the move and retain result as commentary."
+  },
+  {
+    "game": "game13",
+    "kind": "replace-block",
+    "block": "game13-b35",
+    "score": "20. Kt-R4, P-KB3",
+    "note": "Legacy V-KB3 (P/V typo) makes whole line unparseable."
+  },
+  {
+    "game": "game14",
+    "kind": "replace-block",
+    "block": "game14-b23",
+    "score": "10. Q-K2, Kt-KB3",
+    "note": "Missing comma separates two moves."
+  },
+  {
+    "game": "game21",
+    "kind": "replace-block",
+    "block": "game21-b75",
+    "score": "34. K-Q3, P-Kt6",
+    "note": "Missing comma separates two moves."
+  },
+  {
+    "game": "game35",
+    "kind": "replace-block",
+    "block": "game35-b68",
+    "score": "",
+    "note": "This block is an analysis variation (34.KxB), not the played 34.BxP. Preserve as commentary only."
+  },
+  {
+    "game": "game40",
+    "kind": "replace-block",
+    "block": "game40-b45",
+    "score": "26. Kt(Q2)-B1, P-KR4",
+    "note": "Malformed origin (KtQ2)-B1 normalized to Kt(Q2)-B1."
+  },
+  {
+    "game": "game42",
+    "kind": "replace-block",
+    "block": "game42-b28",
+    "score": "19. B-K3, BxKt",
+    "note": "Move numeral ig. is OCR for 19."
+  }
+]

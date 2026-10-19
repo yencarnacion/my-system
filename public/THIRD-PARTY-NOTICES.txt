@@ -1,0 +1,26 @@
+MY SYSTEM · THIRD-PARTY NOTICES
+
+Book
+Aron Nimzowitsch, My System: A Chess Treatise.
+English version by Philip Hereford. London: G. Bell and Sons, Ltd., 1929.
+The source edition and scan were supplied as public-domain material.
+
+chess.js 1.4.0
+Copyright (c) 2025, Jeff Hlywa (jhlywa@gmail.com)
+BSD-2-Clause. The complete license is in vendor/chess-LICENSE.txt.
+Source: https://github.com/jhlywa/chess.js/tree/v1.4.0
+The standalone ESM distribution is vendored without functional changes.
+The missing development source-map reference has been removed; leading
+indentation and the final newline have been normalized.
+
+Chess pieces
+Copyright Cburnett, Wikimedia Commons.
+Licensed here under Creative Commons Attribution-ShareAlike 3.0 Unported:
+https://creativecommons.org/licenses/by-sa/3.0/
+Author: https://commons.wikimedia.org/wiki/User:Cburnett
+Sources: https://commons.wikimedia.org/wiki/Category:SVG_chess_pieces
+Original filenames: Chess_{p,n,b,r,q,k}{l,d}t45.svg.
+Example source and license: https://commons.wikimedia.org/wiki/File:Chess_klt45.svg
+The provided legacy SVG files have been renamed to their piece/color codes;
+XML/DTD declarations removed and a viewBox added for responsive scaling.
+The artwork and these adaptations remain under CC BY-SA 3.0.
