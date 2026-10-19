@@ -4,6 +4,7 @@ const CORE = [
   "./index.html",
   "./style.css",
   "./app.js",
+  "./passage-view.js",
   "./vendor/chess.mjs",
   "./data/book.json",
   "./icon.svg",
@@ -48,15 +49,13 @@ self.addEventListener("fetch", (event) => {
         return response;
       })
       .catch(() =>
-        caches
-          .match(event.request)
-          .then(
-            (hit) =>
-              hit ||
-              new Response("Offline. Open the book once while connected.", {
-                status: 503,
-              }),
-          ),
+        caches.match(event.request).then(
+          (hit) =>
+            hit ||
+            new Response("Offline. Open the book once while connected.", {
+              status: 503,
+            }),
+        ),
       ),
   );
 });

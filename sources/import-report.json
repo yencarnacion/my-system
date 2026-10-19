@@ -1781,6 +1781,1046 @@
       "Game 49 is deliberately an excerpt ending at 20.B-KB5; subsequent comparison games are not appended to its replay."
     ]
   },
+  "passages": [
+    {
+      "id": "passage-diagram_CIX-setup",
+      "chapter": "pa01ch09",
+      "block": "pa01ch09-b42",
+      "moves": 11
+    },
+    {
+      "id": "passage-diagram_CXIV-setup",
+      "chapter": "pa02ch01",
+      "block": "pa02ch01-b19",
+      "moves": 10
+    },
+    {
+      "id": "passage-diagram_CXIX-setup",
+      "chapter": "pa02ch01",
+      "block": "pa02ch01-b40",
+      "moves": 22
+    },
+    {
+      "id": "passage-diagram_CXX-setup",
+      "chapter": "pa02ch01",
+      "block": "pa02ch01-b45",
+      "moves": 11
+    },
+    {
+      "id": "passage-diagram_CXXXIV-setup",
+      "chapter": "pa02ch02",
+      "block": "pa02ch02-b19",
+      "moves": 14
+    },
+    {
+      "id": "passage-diagram_CXXXV-setup",
+      "chapter": "pa02ch02",
+      "block": "pa02ch02-b24",
+      "moves": 19
+    },
+    {
+      "id": "passage-diagram_CXXXVII-setup",
+      "chapter": "pa02ch02",
+      "block": "pa02ch02-b28",
+      "moves": 30
+    },
+    {
+      "id": "passage-diagram_CXXXVIII-setup",
+      "chapter": "pa02ch02",
+      "block": "pa02ch02-b33",
+      "moves": 46
+    },
+    {
+      "id": "passage-diagram_III-setup",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b22",
+      "moves": 5
+    },
+    {
+      "id": "passage-diagram_IV-setup",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b22",
+      "moves": 2
+    },
+    {
+      "id": "passage-diagram_IX-setup",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b47",
+      "moves": 7
+    },
+    {
+      "id": "passage-diagram_LXXXV-setup",
+      "chapter": "pa01ch07",
+      "block": "pa01ch07-b18",
+      "moves": 24
+    },
+    {
+      "id": "passage-diagram_LXXXVIII-setup",
+      "chapter": "pa01ch07",
+      "block": "pa01ch07-b28",
+      "moves": 11
+    },
+    {
+      "id": "passage-diagram_VII-setup",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b39",
+      "moves": 7
+    },
+    {
+      "id": "passage-diagram_VIII-setup",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b41",
+      "moves": 7
+    },
+    {
+      "id": "passage-diagram_X-setup",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b49",
+      "moves": 20
+    },
+    {
+      "id": "passage-diagram_XII-setup",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b58",
+      "moves": 5
+    },
+    {
+      "id": "passage-diagram_IV-line-2",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b22",
+      "moves": 3
+    },
+    {
+      "id": "passage-diagram_V-line-1",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b31",
+      "moves": 5
+    },
+    {
+      "id": "passage-diagram_VI-line-1",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b34",
+      "moves": 11
+    },
+    {
+      "id": "passage-diagram_VI-line-2",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b32",
+      "moves": 10
+    },
+    {
+      "id": "passage-diagram_VII-line-2",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b39",
+      "moves": 3
+    },
+    {
+      "id": "passage-diagram_VII-line-3",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b39",
+      "moves": 6
+    },
+    {
+      "id": "passage-diagram_VIII-line-2",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b41",
+      "moves": 3
+    },
+    {
+      "id": "passage-diagram_VIII-line-3",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b41",
+      "moves": 4
+    },
+    {
+      "id": "passage-diagram_IX-line-2",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b47",
+      "moves": 3
+    },
+    {
+      "id": "passage-diagram_IX-line-3",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b47",
+      "moves": 6
+    },
+    {
+      "id": "passage-diagram_XI-line-1",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b52",
+      "moves": 13
+    },
+    {
+      "id": "passage-diagram_XII-line-2",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b58",
+      "moves": 3
+    },
+    {
+      "id": "passage-diagram_XII-line-3",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b58",
+      "moves": 5
+    },
+    {
+      "id": "passage-diagram_XV-line-1",
+      "chapter": "pa01ch02",
+      "block": "pa01ch02-b10",
+      "moves": 5
+    },
+    {
+      "id": "passage-diagram_XVII-line-1",
+      "chapter": "pa01ch02",
+      "block": "pa01ch02-b17",
+      "moves": 5
+    },
+    {
+      "id": "passage-diagram_XIX-line-1",
+      "chapter": "pa01ch02",
+      "block": "pa01ch02-b23",
+      "moves": 7
+    },
+    {
+      "id": "passage-diagram_XXI-line-1",
+      "chapter": "pa01ch02",
+      "block": "pa01ch02-b28",
+      "moves": 5
+    },
+    {
+      "id": "passage-diagram_XXIV-line-1",
+      "chapter": "pa01ch02",
+      "block": "pa01ch02-b39",
+      "moves": 3
+    },
+    {
+      "id": "passage-diagram_XXV-line-1",
+      "chapter": "pa01ch02",
+      "block": "pa01ch02-b49",
+      "moves": 5
+    },
+    {
+      "id": "passage-diagram_XXV-line-2",
+      "chapter": "pa01ch02",
+      "block": "pa01ch02-b47",
+      "moves": 5
+    },
+    {
+      "id": "passage-diagram_XXVI-line-1",
+      "chapter": "pa01ch02",
+      "block": "pa01ch02-b50",
+      "moves": 33
+    },
+    {
+      "id": "passage-diagram_XXVIII-line-1",
+      "chapter": "pa01ch03",
+      "block": "pa01ch03-b7",
+      "moves": 10
+    },
+    {
+      "id": "passage-diagram_XXIX-line-1",
+      "chapter": "pa01ch03",
+      "block": "pa01ch03-b10",
+      "moves": 6
+    },
+    {
+      "id": "passage-diagram_XXIX-line-2",
+      "chapter": "pa01ch03",
+      "block": "pa01ch03-b10",
+      "moves": 5
+    },
+    {
+      "id": "passage-diagram_XXIX-line-3",
+      "chapter": "pa01ch03",
+      "block": "pa01ch03-b10",
+      "moves": 5
+    },
+    {
+      "id": "passage-diagram_XXX-line-1",
+      "chapter": "pa01ch03",
+      "block": "pa01ch03-b11",
+      "moves": 5
+    },
+    {
+      "id": "passage-diagram_XXXI-line-1",
+      "chapter": "pa01ch03",
+      "block": "pa01ch03-b13",
+      "moves": 7
+    },
+    {
+      "id": "passage-diagram_XXXII-line-1",
+      "chapter": "pa01ch03",
+      "block": "pa01ch03-b19",
+      "moves": 5
+    },
+    {
+      "id": "passage-diagram_XXXIV-line-1",
+      "chapter": "pa01ch03",
+      "block": "pa01ch03-b29",
+      "moves": 9
+    },
+    {
+      "id": "passage-diagram_XXXV-line-1",
+      "chapter": "pa01ch03",
+      "block": "pa01ch03-b32",
+      "moves": 19
+    },
+    {
+      "id": "passage-diagram_XXXVI-line-1",
+      "chapter": "pa01ch03",
+      "block": "pa01ch03-b34",
+      "moves": 22
+    },
+    {
+      "id": "passage-diagram_XXXVII-line-1",
+      "chapter": "pa01ch03",
+      "block": "pa01ch03-b35",
+      "moves": 11
+    },
+    {
+      "id": "passage-diagram_XLI-line-1",
+      "chapter": "pa01ch04",
+      "block": "pa01ch04-b16",
+      "moves": 21
+    },
+    {
+      "id": "passage-diagram_XLII-line-1",
+      "chapter": "pa01ch04",
+      "block": "pa01ch04-b16",
+      "moves": 8
+    },
+    {
+      "id": "passage-diagram_XLVa-line-1",
+      "chapter": "pa01ch04",
+      "block": "pa01ch04-b38",
+      "moves": 8
+    },
+    {
+      "id": "passage-diagram_XLVI-line-1",
+      "chapter": "pa01ch04",
+      "block": "pa01ch04-b47",
+      "moves": 17
+    },
+    {
+      "id": "passage-diagram_XLVII-line-1",
+      "chapter": "pa01ch04",
+      "block": "pa01ch04-b47",
+      "moves": 13
+    },
+    {
+      "id": "passage-diagram_LI-line-1",
+      "chapter": "pa01ch04",
+      "block": "pa01ch04-b72",
+      "moves": 9
+    },
+    {
+      "id": "passage-diagram_LIII-line-1",
+      "chapter": "pa01ch04",
+      "block": "pa01ch04-b75",
+      "moves": 6
+    },
+    {
+      "id": "passage-diagram_LIV-line-1",
+      "chapter": "pa01ch04",
+      "block": "pa01ch04-b78",
+      "moves": 5
+    },
+    {
+      "id": "passage-diagram_LVIa-line-1",
+      "chapter": "pa01ch04",
+      "block": "pa01ch04-b94",
+      "moves": 13
+    },
+    {
+      "id": "passage-diagram_LVIb-line-1",
+      "chapter": "pa01ch04",
+      "block": "pa01ch04-b96",
+      "moves": 7
+    },
+    {
+      "id": "passage-diagram_LVIb-line-2",
+      "chapter": "pa01ch04",
+      "block": "pa01ch04-b100",
+      "moves": 6
+    },
+    {
+      "id": "passage-diagram_LVII-line-1",
+      "chapter": "pa01ch04",
+      "block": "pa01ch04-b102",
+      "moves": 7
+    },
+    {
+      "id": "passage-diagram_LVIII-line-1",
+      "chapter": "pa01ch04",
+      "block": "pa01ch04-b105",
+      "moves": 22
+    },
+    {
+      "id": "passage-diagram_LX-line-1",
+      "chapter": "pa01ch04",
+      "block": "pa01ch04-b108",
+      "moves": 13
+    },
+    {
+      "id": "passage-diagram_LXI-line-1",
+      "chapter": "pa01ch04",
+      "block": "pa01ch04-b111",
+      "moves": 13
+    },
+    {
+      "id": "passage-diagram_LXII-line-1",
+      "chapter": "pa01ch05",
+      "block": "pa01ch05-b5",
+      "moves": 9
+    },
+    {
+      "id": "passage-diagram_LXIII-line-1",
+      "chapter": "pa01ch05",
+      "block": "pa01ch05-b13",
+      "moves": 12
+    },
+    {
+      "id": "passage-diagram_LXIV-line-1",
+      "chapter": "pa01ch05",
+      "block": "pa01ch05-b16",
+      "moves": 36
+    },
+    {
+      "id": "passage-diagram_LXV-line-1",
+      "chapter": "pa01ch05",
+      "block": "pa01ch05-b17",
+      "moves": 19
+    },
+    {
+      "id": "passage-diagram_LXVI-line-1",
+      "chapter": "pa01ch06",
+      "block": "pa01ch06-b7",
+      "moves": 24
+    },
+    {
+      "id": "passage-diagram_LXVI-line-2",
+      "chapter": "pa01ch06",
+      "block": "pa01ch06-b7",
+      "moves": 4
+    },
+    {
+      "id": "passage-diagram_LXVIII-line-1",
+      "chapter": "pa01ch06",
+      "block": "pa01ch06-b13",
+      "moves": 11
+    },
+    {
+      "id": "passage-diagram_LXIX-line-1",
+      "chapter": "pa01ch06",
+      "block": "pa01ch06-b15",
+      "moves": 11
+    },
+    {
+      "id": "passage-diagram_LXXI-line-1",
+      "chapter": "pa01ch06",
+      "block": "pa01ch06-b27",
+      "moves": 3
+    },
+    {
+      "id": "passage-diagram_LXXIII-line-1",
+      "chapter": "pa01ch06",
+      "block": "pa01ch06-b31",
+      "moves": 21
+    },
+    {
+      "id": "passage-diagram_LXXIV-line-1",
+      "chapter": "pa01ch06",
+      "block": "pa01ch06-b40",
+      "moves": 7
+    },
+    {
+      "id": "passage-diagram_LXXV-line-1",
+      "chapter": "pa01ch06",
+      "block": "pa01ch06-b45",
+      "moves": 23
+    },
+    {
+      "id": "passage-diagram_LXXVII-line-1",
+      "chapter": "pa01ch06",
+      "block": "pa01ch06-b51",
+      "moves": 36
+    },
+    {
+      "id": "passage-diagram_LXXVIII-line-1",
+      "chapter": "pa01ch06",
+      "block": "pa01ch06-b52",
+      "moves": 55
+    },
+    {
+      "id": "passage-diagram_LXXIX-line-1",
+      "chapter": "pa01ch06",
+      "block": "pa01ch06-b54",
+      "moves": 6
+    },
+    {
+      "id": "passage-diagram_LXXXV-line-2",
+      "chapter": "pa01ch07",
+      "block": "pa01ch07-b18",
+      "moves": 9
+    },
+    {
+      "id": "passage-diagram_LXXXVI-line-1",
+      "chapter": "pa01ch07",
+      "block": "pa01ch07-b22",
+      "moves": 7
+    },
+    {
+      "id": "passage-diagram_LXXXVII-line-1",
+      "chapter": "pa01ch07",
+      "block": "pa01ch07-b25",
+      "moves": 3
+    },
+    {
+      "id": "passage-diagram_LXXXVIII-line-2",
+      "chapter": "pa01ch07",
+      "block": "pa01ch07-b28",
+      "moves": 4
+    },
+    {
+      "id": "passage-diagram_LXXXIX-line-1",
+      "chapter": "pa01ch07",
+      "block": "pa01ch07-b37",
+      "moves": 10
+    },
+    {
+      "id": "passage-diagram_XCIII-line-1",
+      "chapter": "pa01ch07",
+      "block": "pa01ch07-b57",
+      "moves": 13
+    },
+    {
+      "id": "passage-diagram_XCVII-line-1",
+      "chapter": "pa01ch08",
+      "block": "pa01ch08-b15",
+      "moves": 23
+    },
+    {
+      "id": "passage-diagram_XCVIII-line-1",
+      "chapter": "pa01ch08",
+      "block": "pa01ch08-b18",
+      "moves": 13
+    },
+    {
+      "id": "passage-diagram_XCIX-line-1",
+      "chapter": "pa01ch08",
+      "block": "pa01ch08-b19",
+      "moves": 27
+    },
+    {
+      "id": "passage-diagram_CI-line-1",
+      "chapter": "pa01ch08",
+      "block": "pa01ch08-b26",
+      "moves": 13
+    },
+    {
+      "id": "passage-diagram_CVII-line-1",
+      "chapter": "pa01ch09",
+      "block": "pa01ch09-b37",
+      "moves": 8
+    },
+    {
+      "id": "passage-diagram_CVIII-line-1",
+      "chapter": "pa01ch09",
+      "block": "pa01ch09-b38",
+      "moves": 5
+    },
+    {
+      "id": "passage-diagram_CVIII-line-2",
+      "chapter": "pa01ch09",
+      "block": "pa01ch09-b38",
+      "moves": 6
+    },
+    {
+      "id": "passage-diagram_CIX-line-2",
+      "chapter": "pa01ch09",
+      "block": "pa01ch09-b44",
+      "moves": 3
+    },
+    {
+      "id": "passage-diagram_CXII-line-1",
+      "chapter": "pa02ch01",
+      "block": "pa02ch01-b10",
+      "moves": 9
+    },
+    {
+      "id": "passage-diagram_CXIII-line-1",
+      "chapter": "pa02ch01",
+      "block": "pa02ch01-b17",
+      "moves": 7
+    },
+    {
+      "id": "passage-diagram_CXIV-line-2",
+      "chapter": "pa02ch01",
+      "block": "pa02ch01-b19",
+      "moves": 13
+    },
+    {
+      "id": "passage-diagram_CXVa-line-1",
+      "chapter": "pa02ch01",
+      "block": "pa02ch01-b22",
+      "moves": 31
+    },
+    {
+      "id": "passage-diagram_CXVb-line-1",
+      "chapter": "pa02ch01",
+      "block": "pa02ch01-b22",
+      "moves": 7
+    },
+    {
+      "id": "passage-diagram_CXVI-line-1",
+      "chapter": "pa02ch01",
+      "block": "pa02ch01-b25",
+      "moves": 10
+    },
+    {
+      "id": "passage-diagram_CXVIIIa-line-1",
+      "chapter": "pa02ch01",
+      "block": "pa02ch01-b32",
+      "moves": 5
+    },
+    {
+      "id": "passage-diagram_CXXI-line-1",
+      "chapter": "pa02ch01",
+      "block": "pa02ch01-b48",
+      "moves": 5
+    },
+    {
+      "id": "passage-diagram_CXXV-line-1",
+      "chapter": "pa02ch01",
+      "block": "pa02ch01-b79",
+      "moves": 4
+    },
+    {
+      "id": "passage-diagram_CXXVII-line-1",
+      "chapter": "pa02ch01",
+      "block": "pa02ch01-b86",
+      "moves": 19
+    },
+    {
+      "id": "passage-diagram_CXXXII-line-1",
+      "chapter": "pa02ch02",
+      "block": "pa02ch02-b6",
+      "moves": 21
+    },
+    {
+      "id": "passage-diagram_CXXXVII-line-2",
+      "chapter": "pa02ch02",
+      "block": "pa02ch02-b28",
+      "moves": 26
+    },
+    {
+      "id": "passage-diagram_CXL-line-1",
+      "chapter": "pa02ch02",
+      "block": "pa02ch02-b39",
+      "moves": 11
+    },
+    {
+      "id": "passage-diagram_CXLI-line-1",
+      "chapter": "pa02ch02",
+      "block": "pa02ch02-b42",
+      "moves": 11
+    },
+    {
+      "id": "passage-diagram_CXLIV-line-1",
+      "chapter": "pa02ch02",
+      "block": "pa02ch02-b61",
+      "moves": 27
+    },
+    {
+      "id": "passage-diagram_CL-line-1",
+      "chapter": "pa02ch03",
+      "block": "pa02ch03-b14",
+      "moves": 10
+    },
+    {
+      "id": "passage-diagram_CLIIc-line-1",
+      "chapter": "pa02ch03",
+      "block": "pa02ch03-b48",
+      "moves": 36
+    },
+    {
+      "id": "passage-diagram_CLV-line-1",
+      "chapter": "pa02ch03",
+      "block": "pa02ch03-b50",
+      "moves": 44
+    },
+    {
+      "id": "passage-diagram_CLVII-line-1",
+      "chapter": "pa02ch04",
+      "block": "pa02ch04-b5",
+      "moves": 11
+    },
+    {
+      "id": "passage-diagram_CLXa-line-1",
+      "chapter": "pa02ch04",
+      "block": "pa02ch04-b19",
+      "moves": 47
+    },
+    {
+      "id": "passage-diagram_CLXI-line-1",
+      "chapter": "pa02ch04",
+      "block": "pa02ch04-b25",
+      "moves": 36
+    },
+    {
+      "id": "passage-diagram_CLXII-line-1",
+      "chapter": "pa02ch04",
+      "block": "pa02ch04-b28",
+      "moves": 11
+    },
+    {
+      "id": "passage-diagram_CLXV-line-1",
+      "chapter": "pa02ch05",
+      "block": "pa02ch05-b11",
+      "moves": 5
+    },
+    {
+      "id": "passage-diagram_CLXVI-line-1",
+      "chapter": "pa02ch05",
+      "block": "pa02ch05-b15",
+      "moves": 11
+    },
+    {
+      "id": "passage-diagram_CLXVII-line-1",
+      "chapter": "pa02ch05",
+      "block": "pa02ch05-b18",
+      "moves": 7
+    },
+    {
+      "id": "passage-diagram_CLXVIII-line-1",
+      "chapter": "pa02ch05",
+      "block": "pa02ch05-b28",
+      "moves": 11
+    },
+    {
+      "id": "passage-diagram_CLXX-line-1",
+      "chapter": "pa02ch06",
+      "block": "pa02ch06-b11",
+      "moves": 44
+    },
+    {
+      "id": "passage-diagram_CLXXII-line-1",
+      "chapter": "pa02ch06",
+      "block": "pa02ch06-b17",
+      "moves": 33
+    },
+    {
+      "id": "passage-diagram_CLXXIV-line-1",
+      "chapter": "pa02ch06",
+      "block": "pa02ch06-b31",
+      "moves": 10
+    },
+    {
+      "id": "passage-diagram_CLXXV-line-1",
+      "chapter": "pa02ch06",
+      "block": "pa02ch06-b33",
+      "moves": 7
+    },
+    {
+      "id": "passage-diagram_CLXXVI-line-1",
+      "chapter": "pa02ch06",
+      "block": "pa02ch06-b34",
+      "moves": 15
+    },
+    {
+      "id": "passage-diagram_CLXXVII-line-1",
+      "chapter": "pa02ch06",
+      "block": "pa02ch06-b35",
+      "moves": 3
+    },
+    {
+      "id": "passage-diagram_CLXXVIII-line-1",
+      "chapter": "pa02ch06",
+      "block": "pa02ch06-b40",
+      "moves": 39
+    },
+    {
+      "id": "passage-diagram_CLXXXVIII-setup",
+      "chapter": "game11",
+      "block": "game11-b32",
+      "moves": 43
+    },
+    {
+      "id": "passage-diagram_CXXIV-line-1",
+      "chapter": "pa02ch01",
+      "block": "pa02ch01-b74",
+      "moves": 7
+    },
+    {
+      "id": "passage-diagram_CXLV-setup",
+      "chapter": "pa02ch02",
+      "block": "pa02ch02-b66",
+      "moves": 16
+    },
+    {
+      "id": "pawnless-development",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b15",
+      "moves": 10
+    },
+    {
+      "id": "pa01ch01-b16-passage-1",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b16",
+      "moves": 25
+    },
+    {
+      "id": "pa01ch01-b26-passage-1",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b26",
+      "moves": 7
+    },
+    {
+      "id": "pa01ch01-b26-passage-2",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b26",
+      "moves": 7
+    },
+    {
+      "id": "pa01ch01-b26-passage-3",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b26",
+      "moves": 15
+    },
+    {
+      "id": "pa01ch01-b28-passage-1",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b28",
+      "moves": 17
+    },
+    {
+      "id": "pa01ch01-b31-passage-1",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b31",
+      "moves": 16
+    },
+    {
+      "id": "pa01ch01-b35-passage-1",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b35",
+      "moves": 14
+    },
+    {
+      "id": "pa01ch01-b37-passage-1",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b37",
+      "moves": 11
+    },
+    {
+      "id": "pa01ch01-b42-passage-1",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b42",
+      "moves": 14
+    },
+    {
+      "id": "pa01ch01-b44-passage-1",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b44",
+      "moves": 14
+    },
+    {
+      "id": "pa01ch01-b49-passage-1",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b49",
+      "moves": 10
+    },
+    {
+      "id": "pa01ch01-b52-passage-1",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b52",
+      "moves": 16
+    },
+    {
+      "id": "pa01ch01-b54-passage-1",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b54",
+      "moves": 22
+    },
+    {
+      "id": "pa01ch01-b58-passage-1",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b58",
+      "moves": 12
+    },
+    {
+      "id": "pa01ch01-b60-passage-1",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b60",
+      "moves": 12
+    },
+    {
+      "id": "pa01ch01-b60-passage-2",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b60",
+      "moves": 12
+    },
+    {
+      "id": "pa01ch01-b63-passage-1",
+      "chapter": "pa01ch01",
+      "block": "pa01ch01-b63",
+      "moves": 8
+    },
+    {
+      "id": "pa01ch02-b8-passage-1",
+      "chapter": "pa01ch02",
+      "block": "pa01ch02-b8",
+      "moves": 12
+    },
+    {
+      "id": "pa01ch03-b19-passage-1",
+      "chapter": "pa01ch03",
+      "block": "pa01ch03-b19",
+      "moves": 9
+    },
+    {
+      "id": "pa01ch03-b19-passage-2",
+      "chapter": "pa01ch03",
+      "block": "pa01ch03-b19",
+      "moves": 8
+    },
+    {
+      "id": "pa01ch03-b20-passage-1",
+      "chapter": "pa01ch03",
+      "block": "pa01ch03-b20",
+      "moves": 13
+    },
+    {
+      "id": "pa01ch03-b21-passage-1",
+      "chapter": "pa01ch03",
+      "block": "pa01ch03-b21",
+      "moves": 4
+    },
+    {
+      "id": "pa01ch03-b22-passage-1",
+      "chapter": "pa01ch03",
+      "block": "pa01ch03-b22",
+      "moves": 5
+    },
+    {
+      "id": "pa01ch03-b23-passage-1",
+      "chapter": "pa01ch03",
+      "block": "pa01ch03-b23",
+      "moves": 5
+    },
+    {
+      "id": "pa01ch04-b33-passage-1",
+      "chapter": "pa01ch04",
+      "block": "pa01ch04-b33",
+      "moves": 5
+    },
+    {
+      "id": "pa01ch04-b78-passage-1",
+      "chapter": "pa01ch04",
+      "block": "pa01ch04-b78",
+      "moves": 13
+    },
+    {
+      "id": "pa01ch04-b86-passage-1",
+      "chapter": "pa01ch04",
+      "block": "pa01ch04-b86",
+      "moves": 5
+    },
+    {
+      "id": "pa01ch05-b7-passage-1",
+      "chapter": "pa01ch05",
+      "block": "pa01ch05-b7",
+      "moves": 5
+    },
+    {
+      "id": "pa01ch05-b8-passage-1",
+      "chapter": "pa01ch05",
+      "block": "pa01ch05-b8",
+      "moves": 2
+    },
+    {
+      "id": "pa01ch06-b14-passage-1",
+      "chapter": "pa01ch06",
+      "block": "pa01ch06-b14",
+      "moves": 3
+    },
+    {
+      "id": "pa01ch06-b24-passage-1",
+      "chapter": "pa01ch06",
+      "block": "pa01ch06-b24",
+      "moves": 3
+    },
+    {
+      "id": "pa01ch07-b31-passage-1",
+      "chapter": "pa01ch07",
+      "block": "pa01ch07-b31",
+      "moves": 25
+    },
+    {
+      "id": "pa01ch07-b32-passage-1",
+      "chapter": "pa01ch07",
+      "block": "pa01ch07-b32",
+      "moves": 28
+    },
+    {
+      "id": "pa01ch07-b34-passage-1",
+      "chapter": "pa01ch07",
+      "block": "pa01ch07-b34",
+      "moves": 21
+    },
+    {
+      "id": "pa01ch07-b41-passage-1",
+      "chapter": "pa01ch07",
+      "block": "pa01ch07-b41",
+      "moves": 20
+    },
+    {
+      "id": "pa01ch09-b34-passage-1",
+      "chapter": "pa01ch09",
+      "block": "pa01ch09-b34",
+      "moves": 14
+    },
+    {
+      "id": "pa01ch09-b35-passage-1",
+      "chapter": "pa01ch09",
+      "block": "pa01ch09-b35",
+      "moves": 17
+    },
+    {
+      "id": "pa01ch09-b56-passage-1",
+      "chapter": "pa01ch09",
+      "block": "pa01ch09-b56",
+      "moves": 7
+    },
+    {
+      "id": "pa01ch09-b70-passage-1",
+      "chapter": "pa01ch09",
+      "block": "pa01ch09-b70",
+      "moves": 24
+    },
+    {
+      "id": "pa02ch02-b71-passage-1",
+      "chapter": "pa02ch02",
+      "block": "pa02ch02-b71",
+      "moves": 7
+    },
+    {
+      "id": "pa02ch04-b25-passage-1",
+      "chapter": "pa02ch04",
+      "block": "pa02ch04-b25",
+      "moves": 56
+    },
+    {
+      "id": "pa02ch05-b7-passage-1",
+      "chapter": "pa02ch05",
+      "block": "pa02ch05-b7",
+      "moves": 46
+    },
+    {
+      "id": "pa02ch05-b11-passage-1",
+      "chapter": "pa02ch05",
+      "block": "pa02ch05-b11",
+      "moves": 27
+    }
+  ],
   "chapterLines": [
     {
       "id": "diagram_CIX-setup",

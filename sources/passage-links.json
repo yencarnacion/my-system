@@ -1,0 +1,530 @@
+[
+  {
+    "line": "diagram_CIX-setup",
+    "block": "pa01ch09-b42"
+  },
+  {
+    "line": "diagram_CXIV-setup",
+    "block": "pa02ch01-b19"
+  },
+  {
+    "line": "diagram_CXIX-setup",
+    "block": "pa02ch01-b40"
+  },
+  {
+    "line": "diagram_CXX-setup",
+    "block": "pa02ch01-b45"
+  },
+  {
+    "line": "diagram_CXXXIV-setup",
+    "block": "pa02ch02-b19"
+  },
+  {
+    "line": "diagram_CXXXV-setup",
+    "block": "pa02ch02-b24"
+  },
+  {
+    "line": "diagram_CXXXVII-setup",
+    "block": "pa02ch02-b28"
+  },
+  {
+    "line": "diagram_CXXXVIII-setup",
+    "block": "pa02ch02-b33"
+  },
+  {
+    "line": "diagram_III-setup",
+    "block": "pa01ch01-b22"
+  },
+  {
+    "line": "diagram_IV-setup",
+    "block": "pa01ch01-b22"
+  },
+  {
+    "line": "diagram_IX-setup",
+    "block": "pa01ch01-b47"
+  },
+  {
+    "line": "diagram_LXXXV-setup",
+    "block": "pa01ch07-b18"
+  },
+  {
+    "line": "diagram_LXXXVIII-setup",
+    "block": "pa01ch07-b28"
+  },
+  {
+    "line": "diagram_VII-setup",
+    "block": "pa01ch01-b39"
+  },
+  {
+    "line": "diagram_VIII-setup",
+    "block": "pa01ch01-b41"
+  },
+  {
+    "line": "diagram_X-setup",
+    "block": "pa01ch01-b49"
+  },
+  {
+    "line": "diagram_XII-setup",
+    "block": "pa01ch01-b58"
+  },
+  {
+    "line": "diagram_IV-line-2",
+    "block": "pa01ch01-b22"
+  },
+  {
+    "line": "diagram_V-line-1",
+    "block": "pa01ch01-b31"
+  },
+  {
+    "line": "diagram_VI-line-1",
+    "block": "pa01ch01-b34"
+  },
+  {
+    "line": "diagram_VI-line-2",
+    "block": "pa01ch01-b32"
+  },
+  {
+    "line": "diagram_VII-line-2",
+    "block": "pa01ch01-b39"
+  },
+  {
+    "line": "diagram_VII-line-3",
+    "block": "pa01ch01-b39"
+  },
+  {
+    "line": "diagram_VIII-line-2",
+    "block": "pa01ch01-b41"
+  },
+  {
+    "line": "diagram_VIII-line-3",
+    "block": "pa01ch01-b41"
+  },
+  {
+    "line": "diagram_IX-line-2",
+    "block": "pa01ch01-b47"
+  },
+  {
+    "line": "diagram_IX-line-3",
+    "block": "pa01ch01-b47"
+  },
+  {
+    "line": "diagram_XI-line-1",
+    "block": "pa01ch01-b52"
+  },
+  {
+    "line": "diagram_XII-line-2",
+    "block": "pa01ch01-b58"
+  },
+  {
+    "line": "diagram_XII-line-3",
+    "block": "pa01ch01-b58"
+  },
+  {
+    "line": "diagram_XV-line-1",
+    "block": "pa01ch02-b10"
+  },
+  {
+    "line": "diagram_XVII-line-1",
+    "block": "pa01ch02-b17"
+  },
+  {
+    "line": "diagram_XIX-line-1",
+    "block": "pa01ch02-b23"
+  },
+  {
+    "line": "diagram_XXI-line-1",
+    "block": "pa01ch02-b28"
+  },
+  {
+    "line": "diagram_XXIV-line-1",
+    "block": "pa01ch02-b39",
+    "blocks": [
+      "pa01ch02-b42"
+    ]
+  },
+  {
+    "line": "diagram_XXV-line-1",
+    "block": "pa01ch02-b49"
+  },
+  {
+    "line": "diagram_XXV-line-2",
+    "block": "pa01ch02-b47"
+  },
+  {
+    "line": "diagram_XXVI-line-1",
+    "block": "pa01ch02-b50"
+  },
+  {
+    "line": "diagram_XXVIII-line-1",
+    "block": "pa01ch03-b7"
+  },
+  {
+    "line": "diagram_XXIX-line-1",
+    "block": "pa01ch03-b10"
+  },
+  {
+    "line": "diagram_XXIX-line-2",
+    "block": "pa01ch03-b10"
+  },
+  {
+    "line": "diagram_XXIX-line-3",
+    "block": "pa01ch03-b10"
+  },
+  {
+    "line": "diagram_XXX-line-1",
+    "block": "pa01ch03-b11"
+  },
+  {
+    "line": "diagram_XXXI-line-1",
+    "block": "pa01ch03-b13"
+  },
+  {
+    "line": "diagram_XXXII-line-1",
+    "block": "pa01ch03-b19"
+  },
+  {
+    "line": "diagram_XXXIV-line-1",
+    "block": "pa01ch03-b29"
+  },
+  {
+    "line": "diagram_XXXV-line-1",
+    "block": "pa01ch03-b32"
+  },
+  {
+    "line": "diagram_XXXVI-line-1",
+    "block": "pa01ch03-b34"
+  },
+  {
+    "line": "diagram_XXXVII-line-1",
+    "block": "pa01ch03-b35"
+  },
+  {
+    "line": "diagram_XLI-line-1",
+    "block": "pa01ch04-b16"
+  },
+  {
+    "line": "diagram_XLII-line-1",
+    "block": "pa01ch04-b16"
+  },
+  {
+    "line": "diagram_XLVa-line-1",
+    "block": "pa01ch04-b38"
+  },
+  {
+    "line": "diagram_XLVI-line-1",
+    "block": "pa01ch04-b47"
+  },
+  {
+    "line": "diagram_XLVII-line-1",
+    "block": "pa01ch04-b47"
+  },
+  {
+    "line": "diagram_LI-line-1",
+    "block": "pa01ch04-b72"
+  },
+  {
+    "line": "diagram_LIII-line-1",
+    "block": "pa01ch04-b75"
+  },
+  {
+    "line": "diagram_LIV-line-1",
+    "block": "pa01ch04-b78"
+  },
+  {
+    "line": "diagram_LVIa-line-1",
+    "block": "pa01ch04-b94"
+  },
+  {
+    "line": "diagram_LVIb-line-1",
+    "block": "pa01ch04-b96"
+  },
+  {
+    "line": "diagram_LVIb-line-2",
+    "block": "pa01ch04-b100",
+    "blocks": [
+      "pa01ch04-b101"
+    ]
+  },
+  {
+    "line": "diagram_LVII-line-1",
+    "block": "pa01ch04-b102"
+  },
+  {
+    "line": "diagram_LVIII-line-1",
+    "block": "pa01ch04-b105"
+  },
+  {
+    "line": "diagram_LX-line-1",
+    "block": "pa01ch04-b108"
+  },
+  {
+    "line": "diagram_LXI-line-1",
+    "block": "pa01ch04-b111",
+    "blocks": [
+      "pa01ch04-b112"
+    ]
+  },
+  {
+    "line": "diagram_LXII-line-1",
+    "block": "pa01ch05-b5"
+  },
+  {
+    "line": "diagram_LXIII-line-1",
+    "block": "pa01ch05-b13"
+  },
+  {
+    "line": "diagram_LXIV-line-1",
+    "block": "pa01ch05-b16"
+  },
+  {
+    "line": "diagram_LXV-line-1",
+    "block": "pa01ch05-b17"
+  },
+  {
+    "line": "diagram_LXVI-line-1",
+    "block": "pa01ch06-b7"
+  },
+  {
+    "line": "diagram_LXVI-line-2",
+    "block": "pa01ch06-b7"
+  },
+  {
+    "line": "diagram_LXVIII-line-1",
+    "block": "pa01ch06-b13"
+  },
+  {
+    "line": "diagram_LXIX-line-1",
+    "block": "pa01ch06-b15"
+  },
+  {
+    "line": "diagram_LXXI-line-1",
+    "block": "pa01ch06-b27"
+  },
+  {
+    "line": "diagram_LXXIII-line-1",
+    "block": "pa01ch06-b31"
+  },
+  {
+    "line": "diagram_LXXIV-line-1",
+    "block": "pa01ch06-b40"
+  },
+  {
+    "line": "diagram_LXXV-line-1",
+    "block": "pa01ch06-b45"
+  },
+  {
+    "line": "diagram_LXXVII-line-1",
+    "block": "pa01ch06-b51"
+  },
+  {
+    "line": "diagram_LXXVIII-line-1",
+    "block": "pa01ch06-b52"
+  },
+  {
+    "line": "diagram_LXXIX-line-1",
+    "block": "pa01ch06-b54"
+  },
+  {
+    "line": "diagram_LXXXV-line-2",
+    "block": "pa01ch07-b18",
+    "blocks": [
+      "pa01ch07-b19"
+    ]
+  },
+  {
+    "line": "diagram_LXXXVI-line-1",
+    "block": "pa01ch07-b22"
+  },
+  {
+    "line": "diagram_LXXXVII-line-1",
+    "block": "pa01ch07-b25"
+  },
+  {
+    "line": "diagram_LXXXVIII-line-2",
+    "block": "pa01ch07-b28"
+  },
+  {
+    "line": "diagram_LXXXIX-line-1",
+    "block": "pa01ch07-b37"
+  },
+  {
+    "line": "diagram_XCIII-line-1",
+    "block": "pa01ch07-b57"
+  },
+  {
+    "line": "diagram_XCVII-line-1",
+    "block": "pa01ch08-b15"
+  },
+  {
+    "line": "diagram_XCVIII-line-1",
+    "block": "pa01ch08-b18"
+  },
+  {
+    "line": "diagram_XCIX-line-1",
+    "block": "pa01ch08-b19"
+  },
+  {
+    "line": "diagram_CI-line-1",
+    "block": "pa01ch08-b26"
+  },
+  {
+    "line": "diagram_CVII-line-1",
+    "block": "pa01ch09-b37"
+  },
+  {
+    "line": "diagram_CVIII-line-1",
+    "block": "pa01ch09-b38"
+  },
+  {
+    "line": "diagram_CVIII-line-2",
+    "block": "pa01ch09-b38"
+  },
+  {
+    "line": "diagram_CIX-line-2",
+    "block": "pa01ch09-b44"
+  },
+  {
+    "line": "diagram_CXII-line-1",
+    "block": "pa02ch01-b10"
+  },
+  {
+    "line": "diagram_CXIII-line-1",
+    "block": "pa02ch01-b17"
+  },
+  {
+    "line": "diagram_CXIV-line-2",
+    "block": "pa02ch01-b19"
+  },
+  {
+    "line": "diagram_CXVa-line-1",
+    "block": "pa02ch01-b22"
+  },
+  {
+    "line": "diagram_CXVb-line-1",
+    "block": "pa02ch01-b22"
+  },
+  {
+    "line": "diagram_CXVI-line-1",
+    "block": "pa02ch01-b25"
+  },
+  {
+    "line": "diagram_CXVIIIa-line-1",
+    "block": "pa02ch01-b32"
+  },
+  {
+    "line": "diagram_CXXI-line-1",
+    "block": "pa02ch01-b48"
+  },
+  {
+    "line": "diagram_CXXV-line-1",
+    "block": "pa02ch01-b79"
+  },
+  {
+    "line": "diagram_CXXVII-line-1",
+    "block": "pa02ch01-b86"
+  },
+  {
+    "line": "diagram_CXXXII-line-1",
+    "block": "pa02ch02-b6"
+  },
+  {
+    "line": "diagram_CXXXVII-line-2",
+    "block": "pa02ch02-b28"
+  },
+  {
+    "line": "diagram_CXL-line-1",
+    "block": "pa02ch02-b39"
+  },
+  {
+    "line": "diagram_CXLI-line-1",
+    "block": "pa02ch02-b42"
+  },
+  {
+    "line": "diagram_CXLIV-line-1",
+    "block": "pa02ch02-b61"
+  },
+  {
+    "line": "diagram_CL-line-1",
+    "block": "pa02ch03-b14"
+  },
+  {
+    "line": "diagram_CLIIc-line-1",
+    "block": "pa02ch03-b48"
+  },
+  {
+    "line": "diagram_CLV-line-1",
+    "block": "pa02ch03-b50"
+  },
+  {
+    "line": "diagram_CLVII-line-1",
+    "block": "pa02ch04-b5"
+  },
+  {
+    "line": "diagram_CLXa-line-1",
+    "block": "pa02ch04-b19"
+  },
+  {
+    "line": "diagram_CLXI-line-1",
+    "block": "pa02ch04-b25"
+  },
+  {
+    "line": "diagram_CLXII-line-1",
+    "block": "pa02ch04-b28"
+  },
+  {
+    "line": "diagram_CLXV-line-1",
+    "block": "pa02ch05-b11"
+  },
+  {
+    "line": "diagram_CLXVI-line-1",
+    "block": "pa02ch05-b15"
+  },
+  {
+    "line": "diagram_CLXVII-line-1",
+    "block": "pa02ch05-b18"
+  },
+  {
+    "line": "diagram_CLXVIII-line-1",
+    "block": "pa02ch05-b28"
+  },
+  {
+    "line": "diagram_CLXX-line-1",
+    "block": "pa02ch06-b11"
+  },
+  {
+    "line": "diagram_CLXXII-line-1",
+    "block": "pa02ch06-b17"
+  },
+  {
+    "line": "diagram_CLXXIV-line-1",
+    "block": "pa02ch06-b31"
+  },
+  {
+    "line": "diagram_CLXXV-line-1",
+    "block": "pa02ch06-b33"
+  },
+  {
+    "line": "diagram_CLXXVI-line-1",
+    "block": "pa02ch06-b34"
+  },
+  {
+    "line": "diagram_CLXXVII-line-1",
+    "block": "pa02ch06-b35"
+  },
+  {
+    "line": "diagram_CLXXVIII-line-1",
+    "block": "pa02ch06-b40"
+  },
+  {
+    "line": "diagram_CLXXXVIII-setup",
+    "block": "game11-b32"
+  },
+  {
+    "line": "diagram_CXXIV-line-1",
+    "block": "pa02ch01-b74"
+  },
+  {
+    "line": "diagram_CXLV-setup",
+    "block": "pa02ch02-b66"
+  }
+]

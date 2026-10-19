@@ -17,6 +17,9 @@ The application uses the supplied 1929 Hereford edition. It preserves the origin
 - `audit-additions.json`: score sequences restored from prose, damaged punctuation, and omitted score lines.
 - `audit-diagram-fixes.json`: diagram placement/caption corrections supported by the scan or replayed game score.
 - `chapter-lines.json`: 130 recovered chapter lines across 109 diagrams, with source references and research notes.
+- `passage-links.json`: explicit links from 129 existing chapter lines to their source paragraphs; these are reviewed source associations, not nearest-diagram guesses.
+- `passage-lines.json`: 43 additional prose sequences (616 half-moves), including examples without printed diagrams. Twenty-four verbatim comments are aligned to specific moves.
+- `teaching-lines.json`: the opening chapter’s ten-move “pawn-less” example, with original notation and quotations separated from editorial learning notes and threat arrows.
 - `import-report.json`: generated per-game completeness and diagram validity report.
 - `public/data/book.json`: generated reader blocks, diagrams, annotations, and replay frames.
 
@@ -45,3 +48,9 @@ Pawn skeletons, split boards, frontier lines, and other schematic illustrations 
 Printed page `p` lies on PDF spread `floor(p / 2) + 8`. The PDF links use this mapping. A scan spread includes two printed pages.
 
 Further text proofreading, additional variation recovery, and historical result metadata can be added without replacing the full reader. Keep corrections in the ledgers and preserve published block IDs.
+
+## Reading without mental replay
+
+Passage players cover every main chapter and reuse existing diagram lines where the same moves occur in prose. They are an additional way to access those lines, not an independent count of unique moves. Every line stores its starting FEN and exact source blocks; a new legal replay verifies its frames. Comments labelled “From the book” must occur verbatim in the linked source paragraph. Automatically generated piece/square descriptions explain the move, while interpretive teaching notes are labelled editorial.
+
+Coverage is not exhaustive. Unresolved or ambiguous continuations stay in the source prose. For example, the Chapter 1 Giuoco Piano passage replay stops at 7...Bxd2+: the next printed “Kt x B” does not establish which of two knights recaptures. The replay’s source note explains this endpoint. Diagram XIII’s caption-only continuation remains available from the diagram rather than being attached to an unrelated paragraph.

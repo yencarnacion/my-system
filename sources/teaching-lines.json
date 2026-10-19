@@ -1,0 +1,48 @@
+[
+  {
+    "id": "pawnless-development",
+    "title": "Why the centre drives the pieces back",
+    "chapter": "pa01ch01",
+    "block": "pa01ch01-b15",
+    "start": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": ["Nf3", "Nc6", "e3", "e5", "Nc3", "Nf6", "Bc4", "d5", "Bb3", "d4"],
+    "originalMoves": [
+      "Kt-KB3",
+      "Kt-QB3",
+      "P-K3",
+      "P-K4",
+      "Kt-QB3",
+      "Kt-KB3",
+      "B-B4?",
+      "P-Q4",
+      "B-Kt3",
+      "P-Q5"
+    ],
+    "comments": [
+      "",
+      "",
+      "Since the pawn has not been moved to the centre, we may still regard the advance as pawn-less in our sense.",
+      "",
+      "",
+      "",
+      "",
+      "And now the faultiness of White's development may be seen, the Black pawns have a demobilizing effect.",
+      "bad at the outset, a piece moved twice",
+      "White is uncomfortably placed, at any rate from the point of view of the player with little fighting experience."
+    ],
+    "studyNotes": [
+      "White brings a knight towards the centre. Both central pawns are still on their starting squares.",
+      "Black develops a knight too. So far, neither side has moved a central pawn.",
+      "The pawn opens a path for the bishop, but e3 is outside the four central squares: d4, e4, d5 and e5. This is what the author means by ‘pawn-less’ here.",
+      "Black occupies e5 with a pawn. Notice the contrast with White’s pawn on e3.",
+      "White develops the other knight to c3. Remember this square: Black’s d-pawn will attack it later.",
+      "Black develops the second knight while keeping the pawn on e5 in the centre.",
+      "White develops the bishop to c4. The question mark in the book warns that Black can gain time by attacking it with a pawn.",
+      "The pawn on d5 attacks the bishop on c4. White must spend time responding to that threat. The orange arrow shows the attack.",
+      "The bishop retreats from c4 to b3. White has now used two turns on this bishop, while Black has built a pawn centre.",
+      "The same pawn advances to d4 and now attacks the knight on c3. This is the ‘demobilizing’ effect: the centre drives developed pieces away. Step back twice to compare the two pawn attacks."
+    ],
+    "arrows": [[], [], [], [], [], [], [], [["d5", "c4"]], [], [["d4", "c3"]]],
+    "note": "Opening chapter, §2, paragraph beginning ‘1. Kt-KB3, Kt-QB3’. The ten moves are transcribed from that paragraph and replayed from the normal starting position. Book excerpts are verbatim except surrounding punctuation; the separate learning notes and orange threat arrows are editorial explanations."
+  }
+]

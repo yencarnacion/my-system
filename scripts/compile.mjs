@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { Chess, DEFAULT_POSITION } from "../public/vendor/chess.mjs";
 import { normalize, scoreLine, resolveSequence } from "./descriptive.mjs";
+import { compilePassages } from "./passages.mjs";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const book = JSON.parse(
   fs.readFileSync(path.join(root, "sources/extracted.json"), "utf8"),
@@ -291,6 +292,7 @@ for (const d of book.diagrams)
         Number(b.diagramPly === b.moves.length),
   );
 book.games = games;
+const passageStats = compilePassages(book, root);
 book.stats = {
   chapters: 15,
   games: 50,
@@ -302,7 +304,16 @@ book.stats = {
   chapterReplayMoves: chapterLines.reduce((n, l) => n + l.moves.length, 0),
   replayableDiagrams: book.diagrams.filter((d) => d.lines.length || d.game)
     .length,
+  ...passageStats,
 };
+report.passages = Object.values(book.passages).map(
+  ({ id, chapter, block, moves }) => ({
+    id,
+    chapter,
+    block,
+    moves: moves.length,
+  }),
+);
 report.chapterLines = chapterLines.map((l) => ({
   id: l.id,
   diagram: l.diagram,

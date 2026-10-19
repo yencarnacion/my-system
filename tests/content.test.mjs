@@ -7,6 +7,7 @@ import {
   resolveSequence,
   scoreLine,
 } from "../scripts/descriptive.mjs";
+import { describeMove } from "../public/passage-view.js";
 const book = JSON.parse(
   fs.readFileSync(new URL("../public/data/book.json", import.meta.url)),
 );
@@ -168,4 +169,68 @@ test("Split-board teaching lines are preserved", () => {
   assert.ok(
     book.diagrams.find((d) => d.id === "diagram_XLVIII").strokes.length,
   );
+});
+
+test("Passage replays stay attached to real source blocks and replay exactly", () => {
+  const blocks = new Map(
+    book.chapters.flatMap((c) => c.blocks.map((b) => [b.id, { c, b }])),
+  );
+  for (const l of Object.values(book.passages)) {
+    assert.ok(l.note && l.context, l.id);
+    assert.ok(l.moves.length, l.id);
+    for (const id of l.blocks) {
+      const { c, b } = blocks.get(id);
+      assert.equal(c.id, l.chapter, l.id);
+      assert.ok(b.passages.includes(l.id), l.id);
+      assert.notEqual(b.type, "diagram", l.id);
+    }
+    const chess = new Chess(l.start);
+    for (const m of l.moves) {
+      assert.equal(chess.turn(), m.side, l.id);
+      assert.equal(chess.moveNumber(), m.number, l.id);
+      const move = chess.move(m.san);
+      assert.equal(move.piece, m.piece, l.id);
+      assert.equal(move.from, m.from, l.id);
+      assert.equal(move.to, m.to, l.id);
+      assert.equal(chess.fen(), m.fen, l.id);
+      assert.doesNotMatch(describeMove(m), /undefined/, l.id);
+      if (m.comment)
+        assert.ok(
+          l.context.includes(m.comment),
+          `${l.id}: quoted commentary must occur in its source passage`,
+        );
+    }
+  }
+});
+test("The pawn-less example demonstrates the two actual pawn attacks", () => {
+  const l = book.passages["pawnless-development"];
+  assert.equal(l.block, "pa01ch01-b15");
+  assert.deepEqual(
+    l.moves.map((m) => m.san),
+    ["Nf3", "Nc6", "e3", "e5", "Nc3", "Nf6", "Bc4", "d5", "Bb3", "d4"],
+  );
+  assert.equal(describeMove(l.moves[0]), "White knight: g1 → f3.");
+  for (const [ply, target, piece] of [
+    [8, "c4", "b"],
+    [10, "c3", "n"],
+  ]) {
+    const m = l.moves[ply - 1],
+      chess = new Chess(m.fen);
+    assert.equal(chess.get(target).type, piece);
+    assert.ok(chess.isAttacked(target, "b"));
+    assert.deepEqual(m.arrows, [[m.to, target]]);
+    assert.ok(m.studyNote && m.comment);
+  }
+  for (const m of l.moves)
+    if (m.comment) assert.ok(l.context.includes(m.comment));
+});
+test("Replay cards cover the prose of every main chapter", () => {
+  for (const c of book.chapters.filter((c) =>
+    ["elements", "position"].includes(c.group),
+  ))
+    assert.ok(
+      c.blocks.some((b) => b.passages?.length),
+      c.id,
+    );
+  assert.ok(book.stats.passageBlocks >= 100);
 });

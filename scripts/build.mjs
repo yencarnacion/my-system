@@ -20,6 +20,7 @@ fs.cpSync(path.join(root, "public"), output, { recursive: true });
 const version = crypto
   .createHash("sha256")
   .update(fs.readFileSync(path.join(output, "app.js")))
+  .update(fs.readFileSync(path.join(output, "passage-view.js")))
   .update(fs.readFileSync(path.join(output, "style.css")))
   .update(fs.readFileSync(path.join(output, "data/book.json")))
   .digest("hex")

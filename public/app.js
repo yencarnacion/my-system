@@ -1,4 +1,5 @@
 import { Chess, DEFAULT_POSITION } from "./vendor/chess.mjs";
+import { passageChoices, passagePlayer, describeMove } from "./passage-view.js";
 
 const $ = (s) => document.querySelector(s),
   $$ = (s) => [...document.querySelectorAll(s)];
@@ -64,6 +65,7 @@ let book,
   route,
   activeChapter = null,
   activeDiagram = null,
+  inlineBlock = null,
   line = null,
   ply = 0,
   flipped = false,
@@ -288,6 +290,8 @@ function renderBlock(b) {
     return `<section class="section-block block" id="${b.id}"><h2>${text}<a class="section-link" href="${chapterLink(activeChapter.id, b.id)}" aria-label="Link to this section">§</a></h2></section>`;
   if (b.type === "table")
     return `<div class="table-scroll block" id="${b.id}" tabindex="0" aria-label="Book table; scroll horizontally">${text}</div>`;
+  if (b.passages?.length)
+    return `<div class="block passage-block" id="${b.id}"><p>${text}</p>${passageChoices(b, book, icon)}</div>`;
   return `<p class="block" id="${b.id}">${text}</p>`;
 }
 function read() {
@@ -304,15 +308,38 @@ function read() {
   const wantedPly = route.params.has("ply")
     ? Number(route.params.get("ply"))
     : null;
-  if (c.game && !route.params.get("diagram"))
+  const requestedPassage = book.passages?.[route.params.get("passage")];
+  if (requestedPassage?.chapter === c.id)
+    selectPassage(
+      requestedPassage.id,
+      wantedPly ?? 0,
+      route.params.get("section"),
+    );
+  else if (c.game && !route.params.get("diagram"))
     selectGame(c.game, wantedPly ?? 0);
   else if (diagram) selectDiagram(diagram, wantedPly, false);
   else clearLab();
   $("#main").innerHTML =
-    `<div class="reading-progress" aria-hidden="true"><span></span></div><div class="mobile-reader-tabs" role="group" aria-label="Reading view"><button id="read-tab" aria-controls="reader-panel" aria-pressed="true" data-view="read">${"Read the book"}</button><button id="board-tab" aria-controls="board-panel" aria-pressed="false" data-view="board">Explore the board</button></div><div class="reader-shell">${toc(c)}<article class="reader-content" id="reader-panel" aria-labelledby="chapter-title"><div class="mobile-contents"><label class="visually-hidden" for="chapter-select">Choose a chapter or game</label><select id="chapter-select">${book.chapters.map((x) => `<option value="${x.id}" ${x.id === c.id ? "selected" : ""}>${esc(x.title)}</option>`).join("")}</select></div><div class="reader-topline"><p class="eyebrow">${groupNames[c.group]} ${c.group === "elements" || c.group === "position" ? ` / ${+c.id.slice(-2)}` : ""}</p><div class="reader-tools"><button class="icon-button" id="bookmark" aria-label="Bookmark this reading position">${icon("bookmark")}</button><button class="icon-button" id="share" aria-label="Share this reading position">${icon("share")}</button></div></div><h1 id="chapter-title" class="reader-title">${esc(c.title)}</h1><p class="chapter-summary">${c.diagramCount} diagrams · ${Math.ceil(c.wordCount / 180)} min reading${c.game ? " · Play the game in the laboratory" : ""}<br>Original text · 1929 edition</p>${c.game ? `<div class="tip"><strong>Follow the game, move by move.</strong>The laboratory uses modern notation and keeps the book’s comments beside the position.<br><button class="text-link" id="open-game">Open game replay →</button></div>` : ""}<div class="prose">${c.blocks.map(renderBlock).join("")}</div><div class="chapter-end"><button id="mark-read" class="${completed.includes(c.id) ? "" : "primary"}">${completed.includes(c.id) ? "✓ Chapter read" : "Mark as read"}</button>${nextChapter(c)}</div></article><aside class="lab-column" id="board-panel" aria-label="Chess laboratory"><div id="lab"></div><div class="lab-context"><p>Pause before the next move. What would you play?</p><p>Use <strong>Try a move</strong> to explore an idea, then return to the book. ← and → work when the board controls have focus.</p><a href="#/about">How this edition was prepared →</a></div></aside></div>`;
+    `<div class="reading-progress" aria-hidden="true"><span></span></div><div class="mobile-reader-tabs" role="group" aria-label="Reading view"><button id="read-tab" aria-controls="reader-panel" aria-pressed="true" data-view="read">${"Read the book"}</button><button id="board-tab" aria-controls="board-panel" aria-pressed="false" data-view="board">Explore the board</button></div><div class="reader-shell">${toc(c)}<article class="reader-content" id="reader-panel" aria-labelledby="chapter-title"><div class="mobile-contents"><label class="visually-hidden" for="chapter-select">Choose a chapter or game</label><select id="chapter-select">${book.chapters.map((x) => `<option value="${x.id}" ${x.id === c.id ? "selected" : ""}>${esc(x.title)}</option>`).join("")}</select></div><div class="reader-topline"><p class="eyebrow">${groupNames[c.group]} ${c.group === "elements" || c.group === "position" ? ` / ${+c.id.slice(-2)}` : ""}</p><div class="reader-tools"><button class="icon-button" id="bookmark" aria-label="Bookmark this reading position">${icon("bookmark")}</button><button class="icon-button" id="share" aria-label="Share this reading position">${icon("share")}</button></div></div><h1 id="chapter-title" class="reader-title">${esc(c.title)}</h1><p class="chapter-summary">${c.diagramCount} diagrams${c.blocks.some((b) => b.passages?.length) ? ` · ${c.blocks.filter((b) => b.passages?.length).length} replayable passages` : ""} · ${Math.ceil(c.wordCount / 180)} min reading${c.game ? " · Play the game in the laboratory" : ""}<br>Original text · 1929 edition</p>${c.game ? `<div class="tip"><strong>Follow the game, move by move.</strong>The laboratory uses modern notation and keeps the book’s comments beside the position.<br><button class="text-link" id="open-game">Open game replay →</button></div>` : ""}${c.blocks.some((b) => b.passages?.length) ? `<div class="tip passage-tip"><strong>You do not need to play the moves in your head.</strong>Use <b>Play this passage</b> beneath the text. Follow the board one move at a time, with the moves explained in words. Each alternative has its own replay.</div>` : ""}<div class="prose">${c.blocks.map(renderBlock).join("")}</div><div class="chapter-end"><button id="mark-read" class="${completed.includes(c.id) ? "" : "primary"}">${completed.includes(c.id) ? "✓ Chapter read" : "Mark as read"}</button>${nextChapter(c)}</div></article><aside class="lab-column" id="board-panel" aria-label="Chess laboratory"><div id="lab"></div><div class="lab-context"><p>Pause before the next move. What would you play?</p><p>Use <strong>Try a move</strong> to explore an idea, then return to the book. ← and → work when the board controls have focus.</p><a href="#/about">How this edition was prepared →</a></div></aside></div>`;
   $("#chapter-select").onchange = (e) =>
     (location.hash = chapterLink(e.target.value));
   $$("[data-view]").forEach((b) => (b.onclick = () => setView(b.dataset.view)));
+  $$("[data-open-passage]").forEach((button) => {
+    button.onclick = () => {
+      const block = button.closest(".block").id;
+      selectPassage(button.dataset.openPassage, 0, block);
+      currentBlock = block;
+      updateBoardUrl({ section: block, view: "read" });
+      setView("read", false);
+      renderLab();
+      document
+        .getElementById("passage-player")
+        ?.scrollIntoView({ block: "start", behavior: "instant" });
+      $("#passage-player [data-inline-action=next]")?.focus({
+        preventScroll: true,
+      });
+    };
+  });
   $$("[data-open-diagram]").forEach(
     (b) =>
       (b.onclick = () => {
@@ -485,6 +512,7 @@ function renderStudyList() {
 function clearLab() {
   stopPlay();
   activeDiagram = null;
+  inlineBlock = null;
   line = null;
   ply = 0;
   exploring = false;
@@ -495,6 +523,14 @@ function selectGame(id, at = 0) {
   clearLab();
   const g = book.games[id];
   line = { ...g, kind: "game" };
+  ply = clamp(at, 0, line.moves.length);
+}
+function selectPassage(id, at = 0, block = null) {
+  clearLab();
+  const passage = book.passages?.[id];
+  if (!passage) return;
+  line = { ...passage };
+  inlineBlock = passage.blocks.includes(block) ? block : passage.block;
   ply = clamp(at, 0, line.moves.length);
 }
 function selectDiagram(id, at = null, write = false) {
@@ -542,6 +578,8 @@ function updateBoardUrl(extra = {}) {
   const params = new URLSearchParams(location.hash.split("?")[1] || "");
   if (activeDiagram) params.set("diagram", activeDiagram.id);
   else params.delete("diagram");
+  if (line?.kind === "passage") params.set("passage", line.id);
+  else params.delete("passage");
   params.set("ply", String(ply));
   if (activeDiagram?.lines?.some((l) => l.id === line?.id))
     params.set("line", line.id);
@@ -556,7 +594,85 @@ function updateBoardUrl(extra = {}) {
     `${location.pathname}${location.search}#/${route.page === "read" ? "read/" + route.id : route.page}?${params}`,
   );
 }
+function renderInlinePassage() {
+  const previous = $("#passage-player");
+  const focus = previous?.contains(document.activeElement)
+    ? {
+        action: document.activeElement.dataset.inlineAction,
+        step: document.activeElement.dataset.passagePly,
+      }
+    : null;
+  previous?.remove();
+  $$("[data-open-passage]").forEach((button) => {
+    const active =
+      line?.kind === "passage" &&
+      button.dataset.openPassage === line.id &&
+      button.closest(".block").id === inlineBlock;
+    button.setAttribute("aria-expanded", String(active));
+    button.classList.toggle("active", active);
+  });
+  if (!inlineBlock || line?.kind !== "passage") return;
+  const slot = document
+    .getElementById(inlineBlock)
+    ?.querySelector(".passage-slot");
+  if (!slot) return;
+  slot.innerHTML = passagePlayer(line, ply, flipped, !!timer, exploring, icon);
+  slot.querySelectorAll("[data-inline-action]").forEach((button) => {
+    button.onclick = () => {
+      const action = button.dataset.inlineAction;
+      if (action === "share") {
+        share(true);
+        return;
+      }
+      if (action === "laboratory") {
+        labAction("explore");
+        if (exploring) {
+          setView("board");
+          if (!matchMedia("(max-width:760px)").matches)
+            $("#lab")?.scrollIntoView({ block: "start" });
+        }
+        return;
+      }
+      labAction(action);
+    };
+  });
+  slot.querySelectorAll("[data-passage-ply]").forEach((button) => {
+    button.onclick = () => step(+button.dataset.passagePly);
+  });
+  slot.onkeydown = (event) => {
+    const action = {
+      ArrowLeft: "prev",
+      ArrowRight: "next",
+      Home: "first",
+      End: "last",
+    }[event.key];
+    if (action && !exploring) {
+      event.preventDefault();
+      labAction(action);
+    }
+  };
+  if (focus) {
+    const target = focus.action
+      ? slot.querySelector(
+          `[data-inline-action="${focus.action}"]:not(:disabled)`,
+        )
+      : slot.querySelector(`[data-passage-ply="${focus.step}"]:not(:disabled)`);
+    (
+      target ||
+      slot.querySelector(
+        '[data-inline-action="next"]:not(:disabled), [data-inline-action="prev"]:not(:disabled)',
+      )
+    )?.focus({ preventScroll: true });
+  }
+  const activeMove = slot.querySelector('[aria-current="step"]');
+  if (activeMove)
+    activeMove.parentElement.scrollTop = Math.max(
+      0,
+      activeMove.offsetTop - activeMove.parentElement.offsetTop - 40,
+    );
+}
 function renderLab() {
+  renderInlinePassage();
   const el = $("#lab");
   if (!el) return;
   const focusAction = el.contains(document.activeElement)
@@ -606,7 +722,7 @@ function renderLab() {
     : d?.conceptual
       ? "Concept illustration"
       : "Book diagram";
-  el.innerHTML = `<div class="lab" data-static="${!line.moves.length}"><div class="lab-head"><div><p class="eyebrow">${exploring ? "Your laboratory" : d ? esc(d.label) : "Game replay"}</p><h2 class="lab-title">${esc(line.title || d?.caption || "A position to study")}</h2></div><button class="icon-button" data-lab="flip" aria-label="Flip board; ${flipped ? "Black" : "White"} is currently at the bottom">${icon("flip")}</button></div>${d?.lines?.length > 1 ? `<div class="line-choice"><label class="visually-hidden" for="line-select">Choose a line from the book</label><select id="line-select" class="lab-select">${d.lines.map((l) => `<option value="${l.id}" ${l.id === line.id ? "selected" : ""}>${esc(l.title)}</option>`).join("")}</select></div>` : ""}<div class="board-wrap"><div class="board ${exploring ? "exploring" : ""} " role="group" aria-label="Chessboard, ${flipped ? "Black" : "White"} at the bottom. ${playable ? (turn === "w" ? "White" : "Black") + " to move." : "Schematic illustration."}">${boardSquares(fen, frame)}${boardOverlay(d, flipped)}</div><div class="board-status"><span>${playable ? `<span class="turn-dot ${turn === "b" ? "black" : ""}"></span>${turn === "w" ? "White" : "Black"} to move${d?.turnInferred && line.kind === "diagram" ? " · choose in explore" : ""}` : "Schematic position"}</span><span>${esc(progress)}</span></div></div><div class="board-controls" aria-label="Replay controls"><button data-lab="first" aria-label="Go to the starting position" ${ply === 0 || exploring ? "disabled" : ""}>${icon("first")}</button><button data-lab="prev" aria-label="Previous move" ${ply === 0 || exploring ? "disabled" : ""}>${icon("prev")}</button><button class="play primary" data-lab="play" aria-label="${timer ? "Pause replay" : ply === line.moves.length ? "Replay from the beginning" : "Play moves automatically"}" ${!line.moves.length || exploring ? "disabled" : ""}>${icon(timer ? "pause" : "play")}</button><button data-lab="next" aria-label="Next move" ${ply === line.moves.length || exploring ? "disabled" : ""}>${icon("next")}</button><button data-lab="last" aria-label="Go to the last move" ${ply === line.moves.length || exploring ? "disabled" : ""}>${icon("last")}</button></div><div class="annotation" aria-live="polite" aria-atomic="true"><span class="annotation-label">${label}${frame && !exploring ? ` · ${frame.number}${frame.side === "b" ? "…" : "."} ${esc(frame.san)}` : ""}</span>${esc(commentary)}${frame?.original && !exploring ? `<details><summary>Original notation${frame.correction ? " & correction" : ""}</summary><p>${esc(frame.sourceOriginal || frame.original)}</p>${frame.correction ? `<p>${esc(frame.correction)}</p>` : ""}</details>` : ""}${d?.correction && !exploring ? `<details><summary>Edition correction</summary><p>${esc(d.correction)}</p></details>` : ""}${!playable ? "<p>This is a schematic illustration. Use the text to study the relationships shown.</p>" : ""}</div>${line.moves.length ? `<div class="move-list" aria-label="Moves in the book"><button data-ply="0" class="${ply === 0 ? "active" : ""}" ${exploring ? "disabled" : ""}>Start</button>${line.moves.map((m, i) => `<button data-ply="${i + 1}" class="${ply === i + 1 ? "active" : ""}" ${ply === i + 1 ? 'aria-current="step"' : ""} ${exploring ? "disabled" : ""}><span class="number">${m.number}${m.side === "w" ? "." : "…"}</span>${esc(m.san)}</button>`).join("")}</div>` : ""}<div class="lab-aux">${playable ? `<button data-lab="explore" ${exploring ? 'class="primary"' : ""}>${exploring ? "Return to book" : "Try a move"}</button>` : ""}${exploring ? '<button data-lab="undo">Undo</button>' : `<button data-lab="share">Share position</button>`}${exploring && line.kind === "diagram" ? '<button data-lab="turn">Change turn</button>' : ""}<button data-lab="fen">Copy FEN</button>${line.moves.length ? '<button data-lab="pgn">Download PGN</button>' : ""}</div></div>${line.complete === false ? '<div class="lab-context">This replay stops at a source passage that still needs verification. The remaining original text is available in the reader.</div>' : ""}${d && line.kind === "diagram" ? `<div class="lab-context">${d.turnInferred && d.playable ? "The illustration does not specify a turn. In exploration, choose White or Black with “Change turn”. Castling is unavailable in diagram-only positions. " : ""}<a href="./source/my-system-1929.pdf#page=${d.scanPage}" target="_blank" rel="noopener">Compare with the original scan · p. ${d.page} ↗</a></div>` : ""}`;
+  el.innerHTML = `<div class="lab" data-static="${!line.moves.length}"><div class="lab-head"><div><p class="eyebrow">${exploring ? "Your laboratory" : d ? esc(d.label) : line.kind === "passage" ? "Passage replay" : "Game replay"}</p><h2 class="lab-title">${esc(line.title || d?.caption || "A position to study")}</h2></div><button class="icon-button" data-lab="flip" aria-label="Flip board; ${flipped ? "Black" : "White"} is currently at the bottom">${icon("flip")}</button></div>${d?.lines?.length > 1 ? `<div class="line-choice"><label class="visually-hidden" for="line-select">Choose a line from the book</label><select id="line-select" class="lab-select">${d.lines.map((l) => `<option value="${l.id}" ${l.id === line.id ? "selected" : ""}>${esc(l.title)}</option>`).join("")}</select></div>` : ""}<div class="board-wrap"><div class="board ${exploring ? "exploring" : ""} " role="group" aria-label="Chessboard, ${flipped ? "Black" : "White"} at the bottom. ${playable ? (turn === "w" ? "White" : "Black") + " to move." : "Schematic illustration."}">${boardSquares(fen, frame)}${boardOverlay(d, flipped)}</div><div class="board-status"><span>${playable ? `<span class="turn-dot ${turn === "b" ? "black" : ""}"></span>${turn === "w" ? "White" : "Black"} to move${d?.turnInferred && line.kind === "diagram" ? " · choose in explore" : ""}` : "Schematic position"}</span><span>${esc(progress)}</span></div></div><div class="board-controls" aria-label="Replay controls"><button data-lab="first" aria-label="Go to the starting position" ${ply === 0 || exploring ? "disabled" : ""}>${icon("first")}</button><button data-lab="prev" aria-label="Previous move" ${ply === 0 || exploring ? "disabled" : ""}>${icon("prev")}</button><button class="play primary" data-lab="play" aria-label="${timer ? "Pause replay" : ply === line.moves.length ? "Replay from the beginning" : "Play moves automatically"}" ${!line.moves.length || exploring ? "disabled" : ""}>${icon(timer ? "pause" : "play")}</button><button data-lab="next" aria-label="Next move" ${ply === line.moves.length || exploring ? "disabled" : ""}>${icon("next")}</button><button data-lab="last" aria-label="Go to the last move" ${ply === line.moves.length || exploring ? "disabled" : ""}>${icon("last")}</button></div><div class="annotation" aria-live="polite" aria-atomic="true">${line.kind === "passage" && frame && !exploring ? `<p class="plain-move">${esc(describeMove(frame))}</p>` : ""}<span class="annotation-label">${label}${frame && !exploring ? ` · ${frame.number}${frame.side === "b" ? "…" : "."} ${esc(frame.san)}` : ""}</span>${esc(commentary)}${frame?.studyNote && !exploring ? `<p class="passage-study-note"><span class="annotation-label">Learning note · editorial</span>${esc(frame.studyNote)}</p>` : ""}${frame?.original && !exploring ? `<details><summary>Original notation${frame.correction ? " & correction" : ""}</summary><p>${esc(frame.sourceOriginal || frame.original)}</p>${frame.correction ? `<p>${esc(frame.correction)}</p>` : ""}</details>` : ""}${d?.correction && !exploring ? `<details><summary>Edition correction</summary><p>${esc(d.correction)}</p></details>` : ""}${!playable ? "<p>This is a schematic illustration. Use the text to study the relationships shown.</p>" : ""}</div>${line.moves.length ? `<div class="move-list" aria-label="Moves in the book"><button data-ply="0" class="${ply === 0 ? "active" : ""}" ${exploring ? "disabled" : ""}>Start</button>${line.moves.map((m, i) => `<button data-ply="${i + 1}" class="${ply === i + 1 ? "active" : ""}" ${ply === i + 1 ? 'aria-current="step"' : ""} ${exploring ? "disabled" : ""}><span class="number">${m.number}${m.side === "w" ? "." : "…"}</span>${esc(m.san)}</button>`).join("")}</div>` : ""}<div class="lab-aux">${playable ? `<button data-lab="explore" ${exploring ? 'class="primary"' : ""}>${exploring ? "Return to book" : "Try a move"}</button>` : ""}${exploring ? '<button data-lab="undo">Undo</button>' : `<button data-lab="share">Share position</button>`}${exploring && line.kind === "diagram" ? '<button data-lab="turn">Change turn</button>' : ""}<button data-lab="fen">Copy FEN</button>${line.moves.length ? '<button data-lab="pgn">Download PGN</button>' : ""}</div></div>${line.complete === false ? '<div class="lab-context">This replay stops at a source passage that still needs verification. The remaining original text is available in the reader.</div>' : ""}${d && line.kind === "diagram" ? `<div class="lab-context">${d.turnInferred && d.playable ? "The illustration does not specify a turn. In exploration, choose White or Black with “Change turn”. Castling is unavailable in diagram-only positions. " : ""}<a href="./source/my-system-1929.pdf#page=${d.scanPage}" target="_blank" rel="noopener">Compare with the original scan · p. ${d.page} ↗</a></div>` : ""}`;
   if (d) {
     const passage = document.createElement("div");
     passage.className = "source-passage";
@@ -900,7 +1016,11 @@ function share(position = false) {
     if (position) {
       if (activeDiagram) params.set("diagram", activeDiagram.id);
       params.set("ply", ply);
-      if (route.page === "read") params.set("view", "board");
+      if (route.page === "read") {
+        params.set("view", inlineBlock ? "read" : "board");
+        if (inlineBlock) params.set("section", inlineBlock);
+      }
+      if (line?.kind === "passage") params.set("passage", line.id);
     } else if (currentBlock) params.set("section", currentBlock);
     url.hash = url.hash.split("?")[0] + "?" + params;
   }
@@ -918,7 +1038,12 @@ function share(position = false) {
   } else copy(url.href, "Link copied.");
 }
 function saveBookmark() {
-  const url = chapterLink(activeChapter.id, currentBlock),
+  const url =
+      line?.kind === "passage" && inlineBlock === currentBlock
+        ? chapterLink(activeChapter.id, currentBlock) +
+          "&" +
+          new URLSearchParams({ passage: line.id, ply: String(ply) })
+        : chapterLink(activeChapter.id, currentBlock),
     exists = bookmarks.some((b) => b.url === url);
   bookmarks = exists
     ? bookmarks.filter((b) => b.url !== url)
@@ -960,7 +1085,7 @@ function downloadPGN() {
 }
 function about() {
   $("#main").innerHTML =
-    `<div class="page-shell about"><p class="eyebrow">About this edition</p><h1 class="reader-title">An old book.<br>A new way to study.</h1><p>This is an interactive reading edition of <em>My System</em> by Aron Nimzowitsch, in Philip Hereford’s 1929 English translation. It preserves the book’s original prose and descriptive notation, with modern algebraic notation in the replays.</p><h2>How to use the laboratory</h2><ol><li>Read a short passage. Open its diagram to put the position on the board.</li><li>Pause and choose a move before revealing the continuation. Use the arrows, tap a move, or play the sequence automatically.</li><li>Select <strong>Try a move</strong> to explore your own line. Legal destinations are marked. <strong>Return to book</strong> restores the exact position you left.</li><li>Bookmark a passage or share a link to a section and replay position.</li></ol><p>On a phone, switch between <strong>Read the book</strong> and <strong>Explore the board</strong>. On a larger screen, both remain side by side. Progress is stored only in this browser; it does not sync between devices.</p><h2>Sources & editorial care</h2><p>The full text and 237 diagram records were recovered from the supplied hand-edited digital edition. The supplied OCR text and the <a href="./source/my-system-1929.pdf">1929 scan</a> provide comparison sources. This is a working transcription, not a claim of complete proofreading.</p><p>The 50 game replays contain ${book.stats.replayMoves.toLocaleString()} legally checked half-moves. Another ${book.stats.chapterLines} recovered chapter lines connect the prose to the board; in total, ${book.stats.replayableDiagrams} diagrams have attached replays. The other illustrations remain available to study and, where playable, explore manually. Legal validation checks whether a move can be played; it does not prove that every transcription matches the printed book. Some examples are pawn skeletons or combined illustrations rather than legal positions. These are displayed as schematic diagrams.</p><p>Where the author gives a game score, the replay follows that score. A diagram without an attached sequence can be explored manually when it is a playable position. The short introductory teaching cues are labelled <strong>editorial</strong>; the original game annotations are labelled <strong>From the book</strong>.</p><p>Known errors are recorded in the repository’s correction ledger. Examples include eight restored moves in Game 2 and misprinted piece placements in Games 11 and 45. Original spelling, historical references, and the author’s opinions remain part of the source text.</p><h2>Built for comfortable reading</h2><p>The reader uses generous line spacing, a moderate text measure, adjustable 20–26 pixel text, and a night theme. Main controls are at least 44 pixels high, following <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced" target="_blank" rel="noopener">W3C guidance on target size</a>. There is no animation required to understand a move. Keyboard and reduced-motion preferences are supported.</p><p>“Read, predict, compare” is a study prompt, not a claim that this app has been scientifically tested. You can read straight through, work on a single position, or return to a saved passage.</p><h2>Portable by design</h2><p>The app is a static site. It needs no account, advertising, tracking, database, or paid chess service. After the first successful online visit, the book and boards are cached for offline reading where the browser supports it. The large original PDF is downloaded separately.</p><h2>Credits</h2><p>Book: Aron Nimzowitsch. English version: Philip Hereford. London: G. Bell and Sons, 1929. The source edition was supplied as public-domain material.</p><p>Chess rules: <a href="https://github.com/jhlywa/chess.js">chess.js</a> 1.4.0, BSD-2-Clause. Chess piece artwork: <a href="https://commons.wikimedia.org/wiki/Category:SVG_chess_pieces">Cburnett, Wikimedia Commons</a>, CC BY-SA 3.0; adapted only to scale responsively. See <a href="./THIRD-PARTY-NOTICES.txt">third-party notices</a>.</p>${footer()}</div>`;
+    `<div class="page-shell about"><p class="eyebrow">About this edition</p><h1 class="reader-title">An old book.<br>A new way to study.</h1><p>This is an interactive reading edition of <em>My System</em> by Aron Nimzowitsch, in Philip Hereford’s 1929 English translation. It preserves the book’s original prose and descriptive notation, with modern algebraic notation in the replays.</p><h2>How to use the laboratory</h2><ol><li>Read a short passage. Choose <strong>Play this passage</strong> beneath a move sequence to open a board right there, or open a printed diagram in the laboratory.</li><li>Pause and choose a move before revealing the continuation. Use the arrows, tap a move, or play the sequence automatically.</li><li>Select <strong>Try a move</strong> to explore your own line. Legal destinations are marked. <strong>Return to book</strong> restores the exact position you left.</li><li>Bookmark a passage or share a link to a section and replay position.</li></ol><p>On a phone, switch between <strong>Read the book</strong> and <strong>Explore the board</strong>. On a larger screen, both remain side by side. Progress is stored only in this browser; it does not sync between devices.</p><h2>Sources & editorial care</h2><p>The full text and 237 diagram records were recovered from the supplied hand-edited digital edition. The supplied OCR text and the <a href="./source/my-system-1929.pdf">1929 scan</a> provide comparison sources. This is a working transcription, not a claim of complete proofreading.</p><p>The 50 game replays contain ${book.stats.replayMoves.toLocaleString()} legally checked half-moves. Another ${book.stats.chapterLines} recovered chapter lines connect the prose to the board; in total, ${book.stats.replayableDiagrams} diagrams have attached replays. The other illustrations remain available to study and, where playable, explore manually. In addition, ${book.stats.passageLines} passage replays are attached directly to ${book.stats.passageBlocks} source paragraphs across all 15 main chapters. These reuse verified diagram lines and add prose examples that had no printed board; they do not cover every variation in the book. Legal validation checks whether a move can be played; it does not prove that every transcription matches the printed book. Some examples are pawn skeletons or combined illustrations rather than legal positions. These are displayed as schematic diagrams.</p><p>Where the author gives a game score, the replay follows that score. A diagram without an attached sequence can be explored manually when it is a playable position. The short introductory teaching cues are labelled <strong>editorial</strong>; the original game annotations are labelled <strong>From the book</strong>.</p><p>Known errors are recorded in the repository’s correction ledger. Examples include eight restored moves in Game 2 and misprinted piece placements in Games 11 and 45. Original spelling, historical references, and the author’s opinions remain part of the source text.</p><h2>Built for comfortable reading</h2><p>The reader uses generous line spacing, a moderate text measure, adjustable 20–26 pixel text, and a night theme. Main controls are at least 44 pixels high, following <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced" target="_blank" rel="noopener">W3C guidance on target size</a>. There is no animation required to understand a move. Keyboard and reduced-motion preferences are supported.</p><p>“Read, predict, compare” is a study prompt, not a claim that this app has been scientifically tested. You can read straight through, work on a single position, or return to a saved passage.</p><h2>Portable by design</h2><p>The app is a static site. It needs no account, advertising, tracking, database, or paid chess service. After the first successful online visit, the book and boards are cached for offline reading where the browser supports it. The large original PDF is downloaded separately.</p><h2>Credits</h2><p>Book: Aron Nimzowitsch. English version: Philip Hereford. London: G. Bell and Sons, 1929. The source edition was supplied as public-domain material.</p><p>Chess rules: <a href="https://github.com/jhlywa/chess.js">chess.js</a> 1.4.0, BSD-2-Clause. Chess piece artwork: <a href="https://commons.wikimedia.org/wiki/Category:SVG_chess_pieces">Cburnett, Wikimedia Commons</a>, CC BY-SA 3.0; adapted only to scale responsively. See <a href="./THIRD-PARTY-NOTICES.txt">third-party notices</a>.</p>${footer()}</div>`;
 }
 function search() {
   const q = $("#search-input").value.trim().toLowerCase();

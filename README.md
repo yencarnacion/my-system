@@ -6,6 +6,7 @@ An iPhone-friendly interactive edition of Aron Nimzowitsch’s **My System**, us
 - All 237 diagrams, including the book’s conceptual and composite illustrations.
 - 3,807 legally validated game half-moves, with original annotations and descriptive notation.
 - 130 recovered chapter lines; 150 diagrams connect to a replay. Remaining illustrations display their positions and support manual exploration where playable.
+- Inline passage players throughout all 15 chapters: follow prose examples without switching away from the text, including examples with no printed diagram. Moves have plain-English descriptions, highlighted squares, and arrows; alternatives have separate replays.
 - Search, chapter and passage links, shareable replay positions, bookmarks, and local reading progress.
 - Legal-move exploration, undo, board flipping, autoplay, and PGN/FEN export.
 - Adjustable reading size, night mode, keyboard controls, responsive layouts, and offline caching.
@@ -51,6 +52,7 @@ The deployment workflow is deliberately manual. The templates are inert until in
 #/read/pa01ch01
 #/read/pa01ch01?section=pa01ch01-b14
 #/read/pa01ch01?diagram=diagram_III&ply=4&view=board
+#/read/pa01ch01?section=pa01ch01-b15&passage=pawnless-development&ply=8
 #/read/game01?ply=17
 #/study?diagram=diagram_III&ply=4
 ```
@@ -58,6 +60,8 @@ The deployment workflow is deliberately manual. The templates are inert until in
 The `ply` parameter counts individual moves, starting at zero. Section IDs belong to the frozen source transcription. Preserve them or provide aliases when reorganizing content in a future edition.
 
 Where a diagram has several recovered lines, use the line selector; shared links also preserve that choice.
+
+For prose examples, select **Play this passage** beneath the paragraph. The inline board stays in the reading view, including on a phone. Step forward/back, jump to a move, or autoplay. The plain-English move description explains algebraic notation. The opening chapter’s “pawn-less” example also has editorial learning notes and arrows showing the pawn attacks; original book comments are labelled separately. **Try your own move** opens the full laboratory and preserves the book position.
 
 ## Source and proofreading
 
